@@ -1,0 +1,14 @@
+:root {
+  /* Orange/$-Orange-50 */
+--orange-50: #fff2e7;
+/* Orange/$-Orange-300 */
+--orange-300: #ffac6a;
+/* Orange/$-Orange-400 */
+--orange-400: #ff9138;
+/* Orange/$-Orange-500 */
+--orange-500: #ff7506;
+/* Gray/$-gray-300 */
+--gray-300: #7e7d88;
+/* Gray/$-gray-200 placeholder */
+--gray-200: #a9a9b0;
+}
