@@ -1,10 +1,24 @@
 /* Orange/$-Orange-50 */
+/* Orange/$-Orange-200 */
 /* Orange/$-Orange-300 */
 /* Orange/$-Orange-400 */
 /* Orange/$-Orange-500 */
-/* Gray/$-gray-300 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-100 */
 /* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Reg */
+/* 12/12 Reg */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+* {
+  font-family: "Nunito";
+}
+
 /* Alta Logo */
 .alta-logo {
   margin: 32px 60px 54px;

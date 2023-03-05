@@ -1,0 +1,198 @@
+@import '../../../styles/global';
+
+.ant-layout-header.topbar {
+  display: flex !important;
+  align-items: center !important; 
+  height: 88px !important;
+  padding: 24px !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+
+  .ant-breadcrumb {
+    ol {
+      li {
+        display: flex;
+        align-items: center;
+
+        .ant-breadcrumb-link {
+          display: inline-block!important;
+
+          .text-btn {
+            height: 40px;
+            padding: 5px 8px 5px 0px;
+            color: $-gray-300;
+            font: $-font-20-b;
+            border: 0;
+            border-radius: 8px;
+            cursor: default;
+        
+            &:hover {
+              background-color: transparent!important;
+            }
+          }
+        }
+
+        & + li>.ant-breadcrumb-link>.text-btn {
+          padding-left: 8px;
+        }
+
+        &:last-child>.ant-breadcrumb-link>.text-btn {
+          color: $-orange-500;
+        }
+    
+        .ant-breadcrumb-separator {
+          margin-inline: 0;
+          display: inline-flex;
+        }
+
+        &:last-child>.ant-breadcrumb-separator {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #notification {
+    position: 'relative';
+    
+    .notification-btn {
+      display: flex;
+      align-items: center;
+      border: 0;
+    }
+  }
+
+
+  .ant-dropdown-open {
+    svg {
+      rect {
+        fill: $-orange-500;
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .profile {
+    display: block;
+    line-height: 0;
+    -webkit-user-select: none !important; /* Safari */
+    -ms-user-select: none !important; /* IE 10 and IE 11 */
+    user-select: none !important; /* Standard syntax */
+  }
+
+  .ant-space-vertical.profile-group {
+    gap: 0px !important;
+
+    .ant-space-item {
+      line-height: 0;
+
+      .profile-status {
+        display: inline-block;
+        font: $-font-12-r;
+        color: $-gray-300;
+      }
+      
+      .profile-fullname {
+        display: inline-block;
+        font: $-font-16-b;
+        color: $-gray-400;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// Dropdown
+.ant-dropdown {
+  -webkit-user-select: none !important; /* Safari */
+  -ms-user-select: none !important; /* IE 10 and IE 11 */
+  user-select: none !important; /* Standard syntax */
+
+  .ant-dropdown-menu {
+    padding: 0;
+    width: 360px;
+    max-height: 526px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      margin-top: 48px;
+      height: 200px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $-orange-200;
+    }
+
+    /* White */
+    background: #FFFFFF;
+
+    /* Pink shadow */
+    box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+    border-radius: 10px;
+
+    &::before {
+      display: block;
+      content: 'Thông báo';
+      font: $-font-20-b;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      color: #fff;
+      background-color: $-orange-400;
+      padding: 9px 24px;
+    }
+
+    .ant-dropdown-menu-item {
+      padding: 16px 23px 12px 24px;
+      height: 80px;
+      position: relative;
+
+      &-active {
+        background-color: $-orange-50!important;
+
+        & .notification-item-divider {
+          display: none !important;
+        }
+      }
+
+      .ant-space {
+        gap: 0!important;
+      }
+
+      .notification-item-title {
+        font: $-font-16-b;
+        color: $-orange-600;
+        margin-bottom: 0.25rem;
+      }
+
+      .notification-item-text {
+        font: $-font-16-r;
+        color: $-gray-400;
+        white-space: nowrap;
+      }
+
+      .notification-item-divider {
+        display: block;
+        width: inherit;
+        border-style: inset;
+        opacity: 0.6;
+        border: 0;
+        border-top: 1.5px solid $-gray-100;
+        position: absolute;
+        height: 0px;
+        left: 5.16%;
+        right: 6.02%;
+        bottom: 0px;
+      }
+    }
+  }
+}
