@@ -1,44 +1,102 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout, Menu, ConfigProvider } from 'antd'
 import { Link } from 'react-router-dom';
-import { AltaLogo ,Element4, Monitor, Question, Stack, BarChart, Setting, More, Logout } from './MenuIcons';
+import { AltaLogo, More, Logout } from './MenuIcons';
 import type { MenuProps } from 'antd';
 import './styles/Menu.css'
-import { useState } from 'react';
-
+import { ReadPath, UpdatePath } from '../../../utils/RUDPath';
+import Links, { menuLink } from './Routes/MenuBarRoutes';
 
 const { Sider } = Layout
 
+    // Is Path Vaild
+    const isMenuPathValid = (considerPath: string, baseLinks: menuLink[]) => {
+        let isValid = false
+
+        // Main Menu
+        if(considerPath === '/')
+        {
+            baseLinks.map((baseLink) => {
+                if(baseLink.pathLink === considerPath)
+                {
+                    isValid = true
+                }
+
+                if(baseLink.children!.length > 0)
+                {
+                    baseLink.children?.map((subLink) => {
+                        if (subLink.pathLink === '/')
+                        {
+                            if(subLink.pathLink === considerPath)
+                            {
+                                isValid = true
+                            }
+                        }
+                        else
+                        {
+                            if(subLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[subLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1] === considerPath)
+                            {
+                                isValid = true
+                            }
+                        }
+                        return subLink
+                    })
+                }
+
+                return baseLink
+            })
+        }
+        else
+        {
+
+            baseLinks.map((baseLink) => {
+                if(baseLinks.findIndex((baseLink) => baseLink.pathLink.split('/').filter((path) => path.length > 0)[baseLink.pathLink.split('/').filter((path) => path.length > 0).length -1] === considerPath) !== -1)
+                {
+                    isValid = true
+                }
+
+                if(baseLink.children!.length > 0)
+                {
+                    baseLink.children?.map((subLink) => {
+                        if (subLink.pathLink === '/')
+                        {
+                            if(subLink.pathLink === considerPath)
+                            {
+                                isValid = true
+                            }
+                        }
+                        else
+                        {
+                            if(subLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[subLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1] === considerPath)
+                            {
+                                isValid = true
+                            }
+                        }
+                        return subLink
+                    })
+                }
+
+                return baseLink
+            })
+        }
+        
+        // console.log(isValid)
+        return isValid
+    }
 export const Menubar = () => {
-    // Key
-    const [key, setKey] = useState([window.location.pathname])
+    const [key, setKey] = useState(window.location.pathname === '/' ? [window.location.pathname] : window.location.pathname.split('/').filter((path) => path.length > 0))
+
+    UpdatePath(key)
 
     // Alta Logo Click Selected Event
     const onClick: MenuProps['onClick'] = (e) => {
         // console.log('click ', e.domEvent.currentTarget);
-        setKey([window.location.pathname])
-        // console.log(key)
-      };
 
-    // Redirect Component
-    const Links = [
-        <Link to='/'>Dashboard</Link>,
-        <Link to='/device'>Thiết bị</Link>,
-        <Link to='/service'>Dịch vụ</Link>,
-        <Link to='/progression'>Cấp số</Link>,
-        <Link to='/report'>Báo cáo</Link>,
-        <Link to='#'>Cài đặt hệ thống</Link>,
-        <Link to='/role'>Vai trò</Link>,
-        <Link to='/account'>Tài khoản</Link>,
-        <Link to='/log'>Nhật ký người dùng</Link>,
-        <Link to='/profile'>Thông tin cá nhân</Link>
-    ]
-
-    const Icons = [
-        Element4, Monitor, Question, Stack, BarChart, Setting
-    ]
-    // console.log(window.location.pathname)
-    // console.log(Links[0].props.to)
+        if (window.location.pathname !== '/')
+            setKey(window.location.pathname.split('/').filter((path) => path.length > 0))
+        else
+            setKey([window.location.pathname])
+    };
 
     // Menu Items
     type MenuItem = Required<MenuProps>['items'][number]
@@ -61,18 +119,26 @@ export const Menubar = () => {
           } as MenuItem;
     }
 
-    const items:MenuItem[] = 
-    Icons.map((icon, index) => {
-        if(Icons.length - 1 === index)
+    // Sub Menu
+    const subMenu = (MenuLink: menuLink) => {
+        return MenuLink.children!.map((subMenuLink) => {
+            return getItem(<Link to={subMenuLink.link.to}>{subMenuLink.link.children}</Link>, subMenuLink.pathLink === '/' ? subMenuLink.pathLink : subMenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[subMenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1])
+        })
+    }
+    
+    // Main Menu
+    const items:MenuItem[] = Links.map((MenuLink) => {
+        if(MenuLink.children && MenuLink.children.length > 0)
         {
-            return getItem(Links[index], String(Links[index].props.to), React.createElement(icon), [
-                getItem(Links[Links.length - 4], String(Links[Links.length - 4].props.to)),
-                getItem(Links[Links.length - 3], String(Links[Links.length - 3].props.to)),
-                getItem(Links[Links.length - 2], String(Links[Links.length - 2].props.to)),
-            ])
+            return getItem(<Link to={MenuLink.link.to}>{MenuLink.link.children}</Link>, MenuLink.pathLink === '/' ? MenuLink.pathLink : MenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[MenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1], MenuLink.icon !== undefined ? React.createElement(MenuLink.icon) : null, subMenu(MenuLink))
         }
-        return getItem(Links[index], String(Links[index].props.to), React.createElement(icon),null!)
-    }) as MenuItem[]
+        return getItem(<Link to={MenuLink.link.to}>{MenuLink.link.children}</Link>, MenuLink.pathLink === '/' ? MenuLink.pathLink : MenuLink.pathLink.split('/').filter((path) => path.length > 0)[MenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length -1], MenuLink.icon !== undefined ? React.createElement(MenuLink.icon) : null)
+    })
+
+    // Read Path
+    const paths = ReadPath() as string[]
+    // console.log(paths)
+    // console.log(isMenuPathValid(paths[paths.length - 1], Links))
 
     return (
         <Sider
@@ -89,7 +155,7 @@ export const Menubar = () => {
             }}
         >
             <div className='alta-logo'>
-                <Link to='/' onClick={() => setKey([window.location.pathname])}>{React.createElement(AltaLogo)}</Link>
+                <Link to='/' onClick={() => {setKey(['/'])}}>{React.createElement(AltaLogo)}</Link>
             </div>
             <ConfigProvider
                 theme={{ 
@@ -114,7 +180,7 @@ export const Menubar = () => {
                 onOpenChange={(keys) => {
                     // console.log(keys)
                 }}
-                selectedKeys={[window.location.pathname]}
+                selectedKeys={isMenuPathValid(paths[paths.length - 1], Links) ? paths : [window.location.pathname]}
             />
             </ConfigProvider>
             <div className='logout'>
