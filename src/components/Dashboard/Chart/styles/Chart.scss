@@ -1,0 +1,76 @@
+@import '../../../styles/global';
+
+.chart-header-container {
+  width: 100%;
+  margin-bottom: 1.625rem;
+
+  .ant-space-item {
+    .chart-header-card-meta {
+      margin: 0;
+  
+      .ant-card-meta-detail {
+  
+        .ant-card-meta-title {
+          font: $-font-20-b;
+          color: $-gray-500;
+          margin-bottom: 0.25rem;
+        }
+  
+        .ant-card-meta-description {
+          font: $-font-14-r;
+          color: $-gray-200;
+        }
+      }
+    }
+  
+    
+    &:has(>.chart-header-select-container) {
+      margin-inline-start: auto !important;
+    }
+
+    & .chart-header-select-container {
+
+      .chart-header-select-label {
+        font: $-font-16-s;
+        color: $-gray-500;
+      }
+
+      .chart-header-select {
+
+        .ant-select-selector {
+          padding: 0.5625rem 0.75rem;
+          height: 42px;
+          border: 1.5px solid $-gray-100;
+          border-radius: 8px;
+
+          & .ant-select-selection-item {
+            font: $-font-16-r !important;
+            color: $-gray-300 !important;
+          }
+        }
+
+        .ant-select-dropdown {
+          padding: 0.5rem 0 !important;
+          background: #FFFFFF;
+          box-shadow: 0px 0px 6px #E7E9F2;
+
+          .ant-select-item {
+            padding: 0.625rem 0.75rem;
+            border-radius: 0;
+
+            &.ant-select-item-option-selected {
+              background-color: $-orange-50;
+            }
+
+            .ant-select-item-option-content {
+              font: $-font-16-r;
+              color: $-gray-400;
+            }
+            
+          }
+        }
+
+      }
+    }
+  }
+}

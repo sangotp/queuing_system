@@ -1,0 +1,110 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.menubar-overall-container {
+  gap: 0 !important;
+  padding: 5.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
+  border-radius: 0px 16px 16px 0px;
+  overflow-y: overlay;
+  /* width */
+}
+.menubar-overall-container::-webkit-scrollbar {
+  width: 4px;
+}
+.menubar-overall-container .menubar-overall-title {
+  margin: 1rem 0;
+  color: #ff7506;
+  font: normal 700 24px/36px "Nunito";
+}
+.menubar-overall-container .calendar-card {
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+  border-radius: 12px;
+}
+.menubar-overall-container .overall-card {
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+  border-radius: 12px;
+}
+.menubar-overall-container .overall-card .ant-card-body {
+  padding: 0.75rem 1rem !important;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-meta-container {
+  gap: 37px !important;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-meta-container .overall-card-meta {
+  align-items: center;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-meta-container .overall-card-meta .ant-card-meta-avatar {
+  line-height: 0;
+  padding-inline-end: 0.75rem;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-meta-container .overall-card-meta .ant-card-meta-detail .ant-card-meta-title {
+  color: #535261;
+  font: normal 800 24px/36px "Nunito";
+  margin-bottom: 0;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-status-container {
+  gap: 5px !important;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-status-container .overall-card-meta-status {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-status-container .overall-card-meta-status .ant-card-meta-avatar {
+  line-height: 0;
+  padding-inline-end: 0.25rem;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-status-container .overall-card-meta-status .ant-card-meta-detail {
+  display: inline-flex;
+  align-items: center;
+}
+.menubar-overall-container .overall-card .ant-card-body .overall-card-status-container .overall-card-meta-status .ant-card-meta-detail .ant-card-meta-title {
+  color: #7e7d88;
+  font: normal 400 12px/18px "Nunito";
+  margin-inline-end: 0.25rem;
+  margin-bottom: 0;
+  min-width: 13ch;
+}
+.menubar-overall-container .calendar-card .ant-card-body {
+  padding: 1rem 1.84375rem !important;
+}
+.menubar-overall-container .ant-space-item:has(> .overall-card) + .ant-space-item {
+  margin-top: 0.75rem;
+}
+.menubar-overall-container .ant-space-item:has(> .calendar-card) {
+  margin-top: 1rem !important;
+}/*# sourceMappingURL=MenuBar.css.map */

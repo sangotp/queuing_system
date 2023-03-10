@@ -1,0 +1,116 @@
+@import '../../../../styles/global';
+
+.dashboard-calendar {
+  width: 294px;
+  height: auto;
+  
+  .calendar-header-row {
+    margin-bottom: 1rem;
+
+    .calendar-header-col {
+      display: flex;
+      justify-content: space-between;
+      .prev-month-btn, .next-month-btn {
+        padding: 0.625rem;
+        border: 0;
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+      }
+
+      .date-select-container {
+        gap: 4px !important;
+        .no-icon {
+          .ant-select-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto !important;
+            padding: 0 !important;
+            border: 0;
+            
+            // .ant-select-selection-search {
+            //   input {
+      
+            //   }
+            // }
+            .ant-select-selection-item {
+              padding-inline-end: 0 !important;
+              margin: 0.5625rem 0.25rem !important;
+              color: $-orange-500;
+              font: $-font-16-b;
+            }
+          }
+      
+          .ant-select-arrow {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Calendar Body
+  .ant-picker-panel {
+    border-top: 1px solid #DCDDFD;
+
+    .ant-picker-body {
+      .ant-picker-content {
+        thead > tr > th {
+          padding: 0.53125rem 0.5rem;
+          color: $-orange-400;
+          font: $-font-14-b;
+        }
+
+        tbody > tr > td {
+          padding: 0.125rem;
+          .ant-picker-cell-inner {
+            display: block;
+            padding: 0.53125rem 0.5rem;
+            height: auto;
+            border-radius: 8px;
+          }
+
+          &.ant-picker-cell-today .ant-picker-cell-inner::before {
+            border: 1px solid $-orange-500;
+            border-radius: 8px;
+          }
+
+          &.ant-picker-cell-selected .ant-picker-cell-inner {
+            background-color: $-orange-500;
+          }
+
+          &.ant-picker-cell:not(.ant-picker-cell-selected) {
+            .ant-picker-cell-inner {
+              .ant-picker-calendar-date-value {
+                color: #7E7D88;
+                font: $-font-14-r;
+              }
+
+              &:hover {
+                background-color: $-orange-50 !important;
+              }
+            }
+          }
+
+          &.ant-picker-cell-in-view {
+            .ant-picker-cell-inner {
+              .ant-picker-calendar-date-value {
+                font: $-font-14-lite-b;
+              }
+            }
+          }
+
+          &.ant-picker-cell-in-view:not(.ant-picker-cell-selected) {
+            .ant-picker-cell-inner {
+              .ant-picker-calendar-date-value {
+                color: #535261;
+                font: $-font-14-lite-b;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

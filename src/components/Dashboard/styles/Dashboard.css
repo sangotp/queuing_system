@@ -1,0 +1,101 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.dashboard-container {
+  display: flex;
+  align-items: flex-start;
+}
+.dashboard-container .ant-space-item:has(> .analysis-chart-container) {
+  flex: 1;
+}
+.dashboard-container .analysis-chart-container {
+  gap: 0 !important;
+  margin: 1rem 0 1.25rem 1.5rem;
+  width: calc(100% - 449px);
+}
+.dashboard-container .analysis-chart-container .analysis-chart-title {
+  font: normal 700 24px/36px "Nunito";
+  color: #ff7506;
+  margin-bottom: 1rem !important;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row {
+  padding: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .ant-card-body {
+  padding: 0.5rem 0.48125rem 0.4375rem 0.75rem;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta {
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta.icon-blue .ant-card-meta-avatar {
+  /* Blue */
+  background: rgba(102, 149, 251, 0.15);
+  border: 1px solid rgba(218, 218, 218, 0.15);
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta.icon-green .ant-card-meta-avatar {
+  /* Green */
+  background: rgba(53, 199, 90, 0.15);
+  border: 2px solid rgba(53, 199, 90, 0.15);
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta.icon-orange .ant-card-meta-avatar {
+  /* Orange */
+  background: rgba(255, 172, 106, 0.15);
+  border: 1px solid rgba(218, 218, 218, 0.15);
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta.icon-pink .ant-card-meta-avatar {
+  background: rgba(248, 109, 109, 0.15);
+  border: 1px solid rgba(218, 218, 218, 0.15);
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta .ant-card-meta-avatar {
+  padding: 0.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta .ant-card-meta-avatar svg {
+  width: 24px;
+  height: 24px;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta .ant-card-meta-detail {
+  margin-inline-start: 0.75125rem;
+}
+.dashboard-container .analysis-chart-container .analysis-chart-overall-row .analysis-chart-overall-col .analysis-chart-overall-card .analysis-chart-overall-card-meta .ant-card-meta-detail .ant-card-meta-title {
+  max-width: 8ch;
+  white-space: initial;
+}
+.dashboard-container .chart-overall-container {
+  min-width: 401px;
+}/*# sourceMappingURL=Dashboard.css.map */

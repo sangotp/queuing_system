@@ -1,0 +1,45 @@
+@import '../../../../styles/global';
+
+.card-meta-desc-btn {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  
+  &:disabled {
+    cursor: default;
+    user-select: text;
+    font: $-font-14-lite-b;
+
+    &.orange {
+      color: $-orange-500;
+    }
+
+    &.blue {
+      color: #4277FF;
+    }
+
+    &.green {
+      color: #35C75A;
+    }
+  }
+  
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  span {
+    margin-inline-start: 0.25rem;
+    width: 6ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.card-meta-status-desc-text {
+  font: $-font-14-b;
+  white-space: nowrap;
+}
