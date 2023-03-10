@@ -1,0 +1,67 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.card-meta-desc-btn {
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+.card-meta-desc-btn:disabled {
+  cursor: default;
+  user-select: text;
+  font: normal 600 14px/21px "Nunito";
+}
+.card-meta-desc-btn:disabled.orange {
+  color: #ff7506;
+}
+.card-meta-desc-btn:disabled.blue {
+  color: #4277FF;
+}
+.card-meta-desc-btn:disabled.green {
+  color: #35C75A;
+}
+.card-meta-desc-btn svg {
+  width: 14px;
+  height: 14px;
+}
+.card-meta-desc-btn span {
+  margin-inline-start: 0.25rem;
+  width: 6ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-meta-status-desc-text {
+  font: normal 700 14px/21px "Nunito";
+  white-space: nowrap;
+}/*# sourceMappingURL=CardMeta.css.map */

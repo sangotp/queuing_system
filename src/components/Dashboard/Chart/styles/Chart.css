@@ -1,0 +1,79 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.chart-header-container {
+  width: 100%;
+  margin-bottom: 1.625rem;
+}
+.chart-header-container .ant-space-item .chart-header-card-meta {
+  margin: 0;
+}
+.chart-header-container .ant-space-item .chart-header-card-meta .ant-card-meta-detail .ant-card-meta-title {
+  font: normal 700 20px/30px "Nunito";
+  color: #282739;
+  margin-bottom: 0.25rem;
+}
+.chart-header-container .ant-space-item .chart-header-card-meta .ant-card-meta-detail .ant-card-meta-description {
+  font: normal 400 14px/21px "Nunito";
+  color: #a9a9b0;
+}
+.chart-header-container .ant-space-item:has(> .chart-header-select-container) {
+  margin-inline-start: auto !important;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select-label {
+  font: normal 600 16px/24px "Nunito";
+  color: #282739;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select .ant-select-selector {
+  padding: 0.5625rem 0.75rem;
+  height: 42px;
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select .ant-select-selector .ant-select-selection-item {
+  font: normal 400 16px/24px "Nunito" !important;
+  color: #7e7d88 !important;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select .ant-select-dropdown {
+  padding: 0.5rem 0 !important;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 6px #E7E9F2;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select .ant-select-dropdown .ant-select-item {
+  padding: 0.625rem 0.75rem;
+  border-radius: 0;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select .ant-select-dropdown .ant-select-item.ant-select-item-option-selected {
+  background-color: #fff2e7;
+}
+.chart-header-container .ant-space-item .chart-header-select-container .chart-header-select .ant-select-dropdown .ant-select-item .ant-select-item-option-content {
+  font: normal 400 16px/24px "Nunito";
+  color: #535261;
+}/*# sourceMappingURL=Chart.css.map */

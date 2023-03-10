@@ -28,6 +28,15 @@ $-gray-500: #282739;
 
 /* Font */
 
+/* 30/30 Bold */
+$-font-30-b: normal 700 30px/45px 'Nunito';
+
+/* 24/24 XLbold */
+$-font-24-xlb: normal 900 24px/36px 'Nunito';
+
+/* 24/24 XBold --- */
+$-font-24-xb: normal 800 24px/36px 'Nunito';
+
 /* 24/24 Bold */
 $-font-24-b: normal 700 24px/36px 'Nunito';
 
@@ -42,6 +51,15 @@ $-font-16-s: normal 600 16px/24px 'Nunito';
 
 /* 16/16 Reg */
 $-font-16-r: normal 400 16px/24px 'Nunito';
+
+/* 14/14 Bold */
+$-font-14-b: normal 700 14px/21px 'Nunito';
+
+/* 14/14 Lite Bold --- */
+$-font-14-lite-b: normal 600 14px/21px 'Nunito';
+
+/* 14/14 Reg */
+$-font-14-r: normal 400 14px/21px 'Nunito';
 
 /* 12/12 Reg */
 $-font-12-r: normal 400 12px/18px 'Nunito';

@@ -1,0 +1,106 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.dashboard-calendar {
+  width: 294px;
+  height: auto;
+}
+.dashboard-calendar .calendar-header-row {
+  margin-bottom: 1rem;
+}
+.dashboard-calendar .calendar-header-row .calendar-header-col {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-calendar .calendar-header-row .calendar-header-col .prev-month-btn, .dashboard-calendar .calendar-header-row .calendar-header-col .next-month-btn {
+  padding: 0.625rem;
+  border: 0;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+}
+.dashboard-calendar .calendar-header-row .calendar-header-col .date-select-container {
+  gap: 4px !important;
+}
+.dashboard-calendar .calendar-header-row .calendar-header-col .date-select-container .no-icon .ant-select-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto !important;
+  padding: 0 !important;
+  border: 0;
+}
+.dashboard-calendar .calendar-header-row .calendar-header-col .date-select-container .no-icon .ant-select-selector .ant-select-selection-item {
+  padding-inline-end: 0 !important;
+  margin: 0.5625rem 0.25rem !important;
+  color: #ff7506;
+  font: normal 700 16px/24px "Nunito";
+}
+.dashboard-calendar .calendar-header-row .calendar-header-col .date-select-container .no-icon .ant-select-arrow {
+  display: none;
+}
+.dashboard-calendar .ant-picker-panel {
+  border-top: 1px solid #DCDDFD;
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content thead > tr > th {
+  padding: 0.53125rem 0.5rem;
+  color: #ff9138;
+  font: normal 700 14px/21px "Nunito";
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td {
+  padding: 0.125rem;
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td .ant-picker-cell-inner {
+  display: block;
+  padding: 0.53125rem 0.5rem;
+  height: auto;
+  border-radius: 8px;
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 1px solid #ff7506;
+  border-radius: 8px;
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td.ant-picker-cell-selected .ant-picker-cell-inner {
+  background-color: #ff7506;
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td.ant-picker-cell:not(.ant-picker-cell-selected) .ant-picker-cell-inner .ant-picker-calendar-date-value {
+  color: #7E7D88;
+  font: normal 400 14px/21px "Nunito";
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td.ant-picker-cell:not(.ant-picker-cell-selected) .ant-picker-cell-inner:hover {
+  background-color: #fff2e7 !important;
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td.ant-picker-cell-in-view .ant-picker-cell-inner .ant-picker-calendar-date-value {
+  font: normal 600 14px/21px "Nunito";
+}
+.dashboard-calendar .ant-picker-panel .ant-picker-body .ant-picker-content tbody > tr > td.ant-picker-cell-in-view:not(.ant-picker-cell-selected) .ant-picker-cell-inner .ant-picker-calendar-date-value {
+  color: #535261;
+  font: normal 600 14px/21px "Nunito";
+}/*# sourceMappingURL=Calendar.css.map */

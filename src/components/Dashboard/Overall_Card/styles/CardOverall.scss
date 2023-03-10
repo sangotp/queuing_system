@@ -1,0 +1,54 @@
+@import '../../../styles/global';
+
+.card-overall-title {
+  font: $-font-14-b !important;
+  color: $-gray-400 !important;
+}
+
+.card-overall-desc {
+  gap: 0 !important;
+  display: flex;
+  justify-content: space-between;
+
+  .ant-space-item {
+    display: inline-flex;
+
+    &:has(> .card-overall-desc-text-btn) {
+      margin-bottom: 0.780625rem;
+    }
+
+    .card-overall-desc-title {
+      font: $-font-30-b;
+      color: $-gray-400;
+      white-space: nowrap;
+      margin: 0 !important;
+    }
+  
+    .card-overall-desc-text-btn {
+      font: normal 400 8px/12px 'Nunito';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.061875rem 0.21875rem 0.124375rem;
+      border: 0;
+      border-radius: 7.18115px;
+      height: auto;
+  
+      &.up {
+        /* Orange */
+        color: $-orange-400;
+        background: rgba(255, 149, 1, 0.15);
+      }
+  
+      &.down {
+        /* Red */
+        color: #E73F3F;
+        background: rgba(231, 63, 63, 0.15);
+      }
+  
+      &:disabled {
+        cursor: default;
+      }
+    }
+  }
+}
