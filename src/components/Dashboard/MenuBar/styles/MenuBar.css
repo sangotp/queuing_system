@@ -43,7 +43,18 @@
   /* width */
 }
 .menubar-overall-container::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
+}
+.menubar-overall-container::before {
+  content: "";
+  min-width: 401px;
+  min-height: 88px;
+  border-radius: 0px 16px 0 0;
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  z-index: 1;
 }
 .menubar-overall-container .menubar-overall-title {
   margin: 1rem 0;

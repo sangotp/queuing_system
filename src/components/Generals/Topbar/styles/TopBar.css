@@ -34,7 +34,8 @@
   align-items: center !important;
   height: 88px !important;
   padding: 24px !important;
-  background: rgba(255, 255, 255, 0.4) !important;
+  background: transparent !important;
+  margin-inline-start: 200px;
 }
 .ant-layout-header.topbar .ant-breadcrumb ol li {
   display: flex;
@@ -81,6 +82,22 @@
 }
 .ant-layout-header.topbar .ant-dropdown-open svg path {
   fill: #fff;
+}
+.ant-layout-header.topbar .topbar-right-side {
+  display: flex;
+  margin-inline-start: auto;
+  margin-inline-end: 2.5rem;
+}
+.ant-layout-header.topbar .topbar-right-side-fixed {
+  display: flex;
+  margin-inline-start: auto;
+  margin-inline-end: 2.5rem;
+  padding-inline: 1.5rem;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  height: 88px;
+  z-index: 1;
 }
 .ant-layout-header.topbar .profile {
   display: block;

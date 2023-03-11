@@ -60,8 +60,9 @@ const items: MenuItem[] = progressions.map((progression, index) => {
                     )
                 })}
             </Breadcrumb>
-
-            <Space size='large' style={{ marginInlineStart: 'auto', marginInlineEnd: '40px' }}>
+            
+            {/* If location is '/' (DashBoard) then we'll fixed topbar right side */}
+            <Space className={window.location.pathname === '/' ? 'topbar-right-side-fixed' : 'topbar-right-side'} size='large'>
                 <div id='notification'>
                     {/* Offset X = ((360 - 32 (button)) / 2) - 86, Offset Y = 27 */}
                     <Dropdown align={{ offset: [78, 27] }} placement='bottom' menu={{ items }} trigger={['click']} onOpenChange={(isOpen) => {

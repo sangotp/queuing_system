@@ -152,6 +152,8 @@ export const Menubar = () => {
             onCollapse={(collapse, type) => {
             //  console.log(collapse, type)
                 document.querySelector('.logout')?.classList.toggle('hide')
+                document.querySelector('.topbar')?.classList.toggle('reset-margin-start-menubar')
+                document.querySelector('.content-container')?.classList.toggle('reset-margin-start-menubar')
             }}
         >
             <div className='alta-logo'>
