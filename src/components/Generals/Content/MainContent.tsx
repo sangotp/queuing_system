@@ -1,12 +1,13 @@
 import { Layout } from 'antd'
 import { Routes, Route } from 'react-router-dom'
 import { Dashboard, Device, Service, Progression, Report, Roles, Accounts, ActivityHistory, Profile, ForgotPassword, Login, NotFound } from '../../index'
+import './styles/Content.css'
 
 const { Content } = Layout
 
 export const MainContent = () => {
   return (
-    <Content>
+    <Content className='content-container'>
       {/* Route Endpoint Config */}
       <Routes>
         <Route path='/' element={<Dashboard />} />
