@@ -1,0 +1,29 @@
+@import '../../../../styles/global';
+
+.content-space {
+  padding: 1rem 1.5rem;
+  height: 100%;
+  position: relative;
+
+  &:has(table) {
+    width: 100%;
+
+    & > .ant-space-item:not(.ant-space-item:last-child) {
+      margin-inline-end: 5rem;
+    }
+  }
+
+  .ant-space-item:has(> table) {
+    flex: 1 1;
+
+    table {
+      height: 100%;
+    }
+  }
+
+  .ant-space-item:has(> .table-aside-space) {
+    position: fixed;
+    top: calc(88px + 52px + 88px + 16px);
+    right: 0;
+  }
+}

@@ -7,7 +7,7 @@ const MenuBarRoutes = [
     {
       type: 'menuItem',
       level: 1,
-      path: '/',
+      paths: ['/'],
       pathName: 'Dashboard',
       textDisplay: 'Dashboard',
       icon: Element4,
@@ -16,16 +16,25 @@ const MenuBarRoutes = [
     {
       type: 'menuItem',
       level: 1,
-      path: '/device',
+      paths: ['device'],
       pathName: 'device',
       textDisplay: 'Thiết bị',
       icon: Monitor,
-      children: []
+      children: [],
+      actionLinks: [
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['device', 'create'],
+          pathName: 'create device',
+          parentPaths: ['device']
+        },
+      ]
     },
     {
       type: 'menuItem',
       level: 1,
-      path: '/service',
+      paths: ['service'],
       pathName: 'service',
       textDisplay: 'Dịch vụ',
       icon: Question,
@@ -34,7 +43,7 @@ const MenuBarRoutes = [
     {
       type: 'menuItem',
       level: 1,
-      path: '/progression',
+      paths: ['progression'],
       pathName: 'progression',
       textDisplay: 'Cấp số',
       icon: Stack,
@@ -43,7 +52,7 @@ const MenuBarRoutes = [
     {
       type: 'menuItem',
       level: 1,
-      path: '/report',
+      paths: ['report'],
       pathName: 'report',
       textDisplay: 'Báo cáo',
       icon: BarChart,
@@ -52,7 +61,7 @@ const MenuBarRoutes = [
     {
       type: 'menuItem',
       level: 1,
-      path: '#',
+      paths: ['#'],
       pathName: '#',
       textDisplay: 'Cài đặt hệ thống',
       icon: Setting,
@@ -60,7 +69,7 @@ const MenuBarRoutes = [
         {
           type: 'subMenuItem',
           level: 2,
-          path: '/role',
+          paths: ['role'],
           pathName: 'role',
           textDisplay: 'Vai trò',
           icon: null,
@@ -69,7 +78,7 @@ const MenuBarRoutes = [
         {
           type: 'subMenuItem',
           level: 2,
-          path: '/account',
+          paths: ['account'],
           pathName: 'account',
           textDisplay: 'Tài khoản',
           icon: null,
@@ -78,7 +87,7 @@ const MenuBarRoutes = [
         {
           type: 'subMenuItem',
           level: 2,
-          path: '/log',
+          paths: ['log'],
           pathName: 'log',
           textDisplay: 'Nhật ký người dùng',
           icon: null,
@@ -88,37 +97,71 @@ const MenuBarRoutes = [
     },
   ]
 
+export type actionLink = {
+  type: 'actionLink',
+  level: -1,
+  paths: string[],
+  pathName: string,
+  parentPaths: string[]
+}
+
 // Array of actual Link
 const Links = [] as menuLink[]
 
 export type subMenuLink = {
-  type: 'subMenuLink',
-  level: number,
-  link: {to: To, children: React.ReactNode},
-  pathLink: string,
-  linkDisplayText: string,
-  icon?: JSX.Element,
+  type: 'subMenuLink'
+  level: number
+  link: {to: To, children: React.ReactNode}
+  pathLinks: string[]
+  linkDisplayText: string
+  icon?: JSX.Element
+  actionLinks?: actionLink[]
 }
 
 export type menuLink = {
-  type: 'menuLink',
-  level: number,
-  link: {to: To, children: React.ReactNode},
-  pathLink: string,
-  linkDisplayText: string,
-  icon?: () => JSX.Element,
+  type: 'menuLink'
+  level: number
+  link: {to: To, children: React.ReactNode}
+  pathLinks: string[]
+  linkDisplayText: string
+  icon?: () => JSX.Element
   children?: subMenuLink[]
+  actionLinks?: actionLink[]
+}
+
+const generateLink = (paths: string[]) => {
+  let link = ''
+
+  if (JSON.stringify(paths) === JSON.stringify(['/']))
+  {
+    link = '/'
+  }
+  else if (JSON.stringify(paths) === JSON.stringify(['#']))
+  {
+    link = '#'
+  }
+  else
+  {
+    paths.map((path) => {
+      link += `/${path}`
+
+      return path
+    })
+  }
+  
+  return link
 }
 
 MenuBarRoutes.map((route) => {
   const menu:menuLink = {
     type: 'menuLink',
     level: 1,
-    link: { to: route.path, children: route.textDisplay },
-    pathLink: route.path,
+    link: { to: generateLink(route.paths), children: route.textDisplay },
+    pathLinks: route.paths,
     linkDisplayText: route.textDisplay,
     icon: route.icon,
-    children: [] as subMenuLink[]
+    children: [] as subMenuLink[],
+    actionLinks: route.actionLinks as actionLink[]
   }
 
   if (route.children.length > 0)
@@ -127,8 +170,8 @@ MenuBarRoutes.map((route) => {
       const subMenu:subMenuLink = {
         type: 'subMenuLink',
         level: 2,
-        link: { to: subRoute.path, children: subRoute.textDisplay },
-        pathLink: subRoute.path,
+        link: { to: generateLink(subRoute.paths), children: subRoute.textDisplay },
+        pathLinks: subRoute.paths,
         linkDisplayText: subRoute.textDisplay,
       }
       return menu.children!.push(subMenu)

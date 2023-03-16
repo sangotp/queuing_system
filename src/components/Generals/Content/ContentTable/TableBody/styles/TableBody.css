@@ -1,0 +1,123 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.table-body-main-table .ant-table {
+  border-radius: 12px;
+}
+.table-body-main-table .ant-table .ant-table-content table {
+  filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+  border-radius: 12px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+.table-body-main-table .ant-table .ant-table-content table thead > tr > th, .table-body-main-table .ant-table .ant-table-content table thead > tr > td {
+  font: normal 700 16px/24px "Nunito";
+  color: #ffffff;
+  background-color: #ff9138;
+  padding: 0.78125rem 0.5rem;
+}
+.table-body-main-table .ant-table .ant-table-content table thead > tr > th::before, .table-body-main-table .ant-table .ant-table-content table thead > tr > td::before {
+  display: none;
+}
+.table-body-main-table .ant-table .ant-table-content table thead > tr > th:first-child {
+  padding-inline-start: 1rem;
+}
+.table-body-main-table .ant-table .ant-table-content table th + th, .table-body-main-table .ant-table .ant-table-content table thead > tr > td, .table-body-main-table .ant-table .ant-table-content table td + td {
+  border-left: 1px solid #FFE3CD;
+}
+.table-body-main-table .ant-table .ant-table-content table tbody > tr > td {
+  padding: 0.875rem 0.5rem;
+  color: #535261;
+  font: normal 400 14px/21px "Nunito";
+}
+.table-body-main-table .ant-table .ant-table-content table tbody > tr > td > a {
+  text-decoration: underline;
+  color: #4277FF;
+}
+.table-body-main-table .ant-table .ant-table-content table tbody > tr:nth-child(even) {
+  background-color: #fff2e7;
+}
+.table-body-main-table .ant-table .ant-table-content table tbody > tr > td:first-child {
+  padding-inline-start: 1rem;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 0;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-prev svg {
+  fill: #7e7d88;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-prev svg path {
+  stroke: #7e7d88;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 0;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-next svg {
+  fill: #7e7d88;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-next svg path {
+  stroke: #7e7d88;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-disabled svg {
+  fill: #a9a9b0;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-disabled svg path {
+  stroke: #a9a9b0;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-inline-end: 0;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-item a {
+  color: #7e7d88;
+  font: normal 600 16px/22px "Nunito";
+  padding: 0.3125rem 0.6875rem;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-item:not(.ant-pagination-item-active):hover {
+  background-color: rgba(255, 172, 106, 0.2);
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-item.ant-pagination-item-active {
+  background-color: #ff7506;
+  border-color: #fff2e7;
+}
+.table-body-main-table .custom-table-pagination .ant-pagination-item.ant-pagination-item-active a {
+  color: #ffffff;
+  font: normal 700 16px/22px "Nunito";
+}/*# sourceMappingURL=TableBody.css.map */
