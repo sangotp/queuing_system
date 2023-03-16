@@ -9,80 +9,75 @@ import Links, { menuLink } from './Routes/MenuBarRoutes';
 
 const { Sider } = Layout
 
-    // Is Path Vaild
-    const isMenuPathValid = (considerPath: string, baseLinks: menuLink[]) => {
-        let isValid = false
+// Is Path Vaild
+const isMenuPathValid = (considerPaths: string[], menuLinks: menuLink[]) => {
+    let isValid = false
 
-        // Main Menu
-        if(considerPath === '/')
+    menuLinks.map((menuLink) => {
+        // If Valid Menu Link
+        if(JSON.stringify(considerPaths) === JSON.stringify(menuLink.pathLinks) && !isValid)
         {
-            baseLinks.map((baseLink) => {
-                if(baseLink.pathLink === considerPath)
-                {
-                    isValid = true
-                }
-
-                if(baseLink.children!.length > 0)
-                {
-                    baseLink.children?.map((subLink) => {
-                        if (subLink.pathLink === '/')
-                        {
-                            if(subLink.pathLink === considerPath)
-                            {
-                                isValid = true
-                            }
-                        }
-                        else
-                        {
-                            if(subLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[subLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1] === considerPath)
-                            {
-                                isValid = true
-                            }
-                        }
-                        return subLink
-                    })
-                }
-
-                return baseLink
-            })
-        }
-        else
-        {
-
-            baseLinks.map((baseLink) => {
-                if(baseLinks.findIndex((baseLink) => baseLink.pathLink.split('/').filter((path) => path.length > 0)[baseLink.pathLink.split('/').filter((path) => path.length > 0).length -1] === considerPath) !== -1)
-                {
-                    isValid = true
-                }
-
-                if(baseLink.children!.length > 0)
-                {
-                    baseLink.children?.map((subLink) => {
-                        if (subLink.pathLink === '/')
-                        {
-                            if(subLink.pathLink === considerPath)
-                            {
-                                isValid = true
-                            }
-                        }
-                        else
-                        {
-                            if(subLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[subLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1] === considerPath)
-                            {
-                                isValid = true
-                            }
-                        }
-                        return subLink
-                    })
-                }
-
-                return baseLink
-            })
+            isValid = true
         }
         
-        // console.log(isValid)
-        return isValid
+        // If Valid Sub Menu Link
+        if (menuLink.children && !isValid)
+        {
+            menuLink.children.map((subLink) => {
+                if(JSON.stringify(considerPaths) === JSON.stringify(subLink.pathLinks) && !isValid)
+                {
+                    isValid = true
+                }
+
+                return subLink
+            })
+        }
+
+        // If Valid actionLink
+        if (menuLink.actionLinks)
+        {
+            menuLink.actionLinks.map((actionLink) => {
+                if(JSON.stringify(considerPaths) === JSON.stringify(actionLink.paths) && !isValid)
+                {
+                    isValid = true
+                }
+
+                return actionLink
+            })
+        }
+
+        return menuLink
+    })
+    
+    // console.log(isValid)
+    return isValid
+}
+
+const selectedKeysGenerator = (considerPaths: string[], menuLinks: menuLink[]) => {
+    if (isMenuPathValid(considerPaths, menuLinks))
+    {
+        const selectedKeys = [] as string[]
+        menuLinks.map((menuLink) => {
+            if(menuLink.actionLinks)
+            {
+                if(menuLink.actionLinks.findIndex((actionLink) => JSON.stringify(actionLink.paths) === JSON.stringify(considerPaths)) !== -1 && selectedKeys.length === 0)
+                {
+                    const actionLinkIndex = menuLink.actionLinks.findIndex((actionLink) => JSON.stringify(actionLink.paths) === JSON.stringify(considerPaths))
+                    selectedKeys.push(...menuLink.actionLinks![actionLinkIndex].parentPaths)
+                }
+            }
+
+            return menuLink
+        })
+        // console.log(selectedKeys)
+
+        return selectedKeys.length > 0 ? selectedKeys : considerPaths
     }
+
+    return considerPaths
+}
+
+
 export const Menubar = () => {
     const [key, setKey] = useState(window.location.pathname === '/' ? [window.location.pathname] : window.location.pathname.split('/').filter((path) => path.length > 0))
 
@@ -91,7 +86,6 @@ export const Menubar = () => {
     // Alta Logo Click Selected Event
     const onClick: MenuProps['onClick'] = (e) => {
         // console.log('click ', e.domEvent.currentTarget);
-
         if (window.location.pathname !== '/')
             setKey(window.location.pathname.split('/').filter((path) => path.length > 0))
         else
@@ -122,7 +116,7 @@ export const Menubar = () => {
     // Sub Menu
     const subMenu = (MenuLink: menuLink) => {
         return MenuLink.children!.map((subMenuLink) => {
-            return getItem(<Link to={subMenuLink.link.to}>{subMenuLink.link.children}</Link>, subMenuLink.pathLink === '/' ? subMenuLink.pathLink : subMenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[subMenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1])
+            return getItem(<Link to={subMenuLink.link.to}>{subMenuLink.link.children}</Link>, subMenuLink.pathLinks[subMenuLink.pathLinks.length - 1])
         })
     }
     
@@ -130,9 +124,9 @@ export const Menubar = () => {
     const items:MenuItem[] = Links.map((MenuLink) => {
         if(MenuLink.children && MenuLink.children.length > 0)
         {
-            return getItem(<Link to={MenuLink.link.to}>{MenuLink.link.children}</Link>, MenuLink.pathLink === '/' ? MenuLink.pathLink : MenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0)[MenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length - 1], MenuLink.icon !== undefined ? React.createElement(MenuLink.icon) : null, subMenu(MenuLink))
+            return getItem(<Link to={MenuLink.link.to}>{MenuLink.link.children}</Link>, MenuLink.pathLinks[MenuLink.pathLinks.length - 1], MenuLink.icon !== undefined ? React.createElement(MenuLink.icon) : null, subMenu(MenuLink))
         }
-        return getItem(<Link to={MenuLink.link.to}>{MenuLink.link.children}</Link>, MenuLink.pathLink === '/' ? MenuLink.pathLink : MenuLink.pathLink.split('/').filter((path) => path.length > 0)[MenuLink.pathLink.split('/').filter((subPath) => subPath.length > 0).length -1], MenuLink.icon !== undefined ? React.createElement(MenuLink.icon) : null)
+        return getItem(<Link to={MenuLink.link.to}>{MenuLink.link.children}</Link>, MenuLink.pathLinks[MenuLink.pathLinks.length - 1], MenuLink.icon !== undefined ? React.createElement(MenuLink.icon) : null)
     })
 
     // Read Path
@@ -182,7 +176,7 @@ export const Menubar = () => {
                 onOpenChange={(keys) => {
                     // console.log(keys)
                 }}
-                selectedKeys={isMenuPathValid(paths[paths.length - 1], Links) ? paths : [window.location.pathname]}
+                selectedKeys={selectedKeysGenerator(paths, Links)}
             />
             </ConfigProvider>
             <div className='logout'>

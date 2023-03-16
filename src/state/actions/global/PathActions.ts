@@ -18,4 +18,4 @@ type Delete = {
 
 export type ActionTypes = Read | Update | Delete
 
-export const pathInitialState = [] as string[]
+export const pathInitialState = window.location.pathname === '/' ? [window.location.pathname] : window.location.pathname.split('/').filter((path) => path.length > 0) as string[]

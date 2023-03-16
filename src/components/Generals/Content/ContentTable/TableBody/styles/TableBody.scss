@@ -1,0 +1,124 @@
+@import '../../../../../styles/global';
+
+.table-body-main-table {
+  .ant-table {
+    border-radius: 12px;
+    
+    .ant-table-content {
+      table {
+        filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+        border-radius: 12px;
+        border-collapse: collapse;
+        overflow: hidden;
+
+        thead > tr > th, thead > tr > td {
+          font: $-font-16-b;
+          color: #ffffff;
+          background-color: $-orange-400;
+          padding: 0.78125rem 0.5rem;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        thead > tr > th:first-child {
+          padding-inline-start: 1rem;
+        }
+
+        th + th, thead > tr > td, td + td {
+          border-left: 1px solid $-orange-100;
+        }
+
+        tbody > tr > td {
+          padding: 0.875rem 0.5rem;
+          color: $-gray-400;
+          font: $-font-14-r;
+          // &.ant-table-cell-row-hover {
+          //   background-color: rgba($-orange-50, 0.4);
+          // }
+
+          & > a {
+            text-decoration: underline;
+            color: #4277FF;
+          }
+        }
+
+        tbody > tr:nth-child(even)
+        {
+          background-color: $-orange-50;
+        }
+
+        tbody > tr > td:first-child {
+          padding-inline-start: 1rem;
+        }
+      }
+    }
+  }
+
+  // Table Pagination
+  .custom-table-pagination {
+    .ant-pagination-prev {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        fill: $-gray-300;
+        path {
+          stroke: $-gray-300;
+        }
+      }
+      margin-inline-end: 0;
+    }
+
+    .ant-pagination-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        fill: $-gray-300;
+        path {
+          stroke: $-gray-300;
+        }
+      }
+      margin-inline-end: 0;
+    }
+
+    .ant-pagination-disabled {
+      svg {
+        fill: $-gray-200;
+        path {
+          stroke: $-gray-200;
+        }
+      }
+    }
+
+    .ant-pagination-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      margin-inline-end: 0;
+
+      a {
+        color: $-gray-300;
+        font: normal 600 16px/22px 'Nunito';
+        padding: 0.3125rem 0.6875rem;
+      }
+      
+      &:not(.ant-pagination-item-active):hover {
+        background-color: rgba($-orange-300, 0.2);
+      }
+
+      &.ant-pagination-item-active {
+        background-color: $-orange-500;
+        border-color: $-orange-50;
+  
+        a {
+          color: #ffffff;
+          font: normal 700 16px/22px 'Nunito';
+        }
+      }
+    }
+  }
+}

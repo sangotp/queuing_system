@@ -1,0 +1,75 @@
+@import '../../../../styles/global';
+
+.form-control {
+  label {
+    font: $-font-16-s !important;
+    color: $-gray-500 !important;
+  }
+
+  input {
+    border: 1.5px solid $-gray-100;
+    border-radius: 8px;
+    width: min(100vw - 4.5rem, 540px);
+    padding: 0.625rem 0.75rem;
+
+    &::placeholder {
+      color: $-gray-200;
+      font: $-font-16-r;
+    }
+  }
+
+  .ant-select-selector:has(> .ant-select-selection-search):has(> .ant-select-selection-placeholder) {
+    padding: 0.625rem 0.75rem !important;
+    border: 1.5px solid $-gray-100;
+    height: 44px !important;
+
+    .ant-select-selection-placeholder {
+      font: $-font-16-r !important;
+      color: $-gray-200;
+      height: auto;
+    }
+  }
+
+  .ant-select-selector:has(> .ant-select-selection-overflow) {
+    padding: 0.625rem 0.75rem !important;
+    border: 1.5px solid $-gray-100;
+
+    .ant-select-selection-overflow {
+      align-items: center;
+      
+      &:has(.ant-select-selection-item) {
+        margin-bottom: 34px;
+      }
+      
+      .ant-select-selection-item {
+        padding: 0.25rem 0.75rem;
+        height: auto;
+        background: $-orange-300;
+        box-shadow: 0px 0px 6px #E7E9F2;
+        border-radius: 9px;
+
+        .ant-select-selection-item-content {
+          color: #FFFFFF;
+          font: normal 700 14px/19px 'Nunito';
+        }
+
+        .ant-select-selection-item-remove {
+          width: 20px;
+          height: 20px;
+          color: #ffffff;
+          font: normal 700 14px/19px 'Nunito';
+        }
+      }
+
+      .ant-select-selection-search {
+        margin-inline-start: 0;
+      }
+    }
+
+    .ant-select-selection-placeholder {
+      font: $-font-16-r !important;
+      color: $-gray-200;
+      height: auto;
+    }
+  }
+}

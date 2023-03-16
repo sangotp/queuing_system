@@ -37,16 +37,16 @@ export const Topbar = () => {
     const breadcrumbItems = BreadcrumbItemsGenerator()
     const progressions = useSelector((state: reducerTypes) => state.progressions)
     // Dropdown Menu Items
-const items: MenuItem[] = progressions.map((progression, index) => {
-    return getItem(
-        <Space direction='vertical' className='notification-item'>
-            <Typography.Title className='notification-item-title'>Người dùng: {progression.customer_name}</Typography.Title>
-            <Typography.Text className='notification-item-text'>Thời gian nhận số: {ProgressionGrantedDateFormatter('ngày', 'time', progression.grant_time)}</Typography.Text>
-            <div className='notification-item-divider'></div>
-        </Space>,
-        index
-    )
-});
+    const items: MenuItem[] = progressions.map((progression, index) => {
+        return getItem(
+            <Space direction='vertical' className='notification-item'>
+                <Typography.Title className='notification-item-title'>Người dùng: {progression.customer_name}</Typography.Title>
+                <Typography.Text className='notification-item-text'>Thời gian nhận số: {ProgressionGrantedDateFormatter('ngày', 'time', progression.grant_time)}</Typography.Text>
+                <div className='notification-item-divider'></div>
+            </Space>,
+            index
+        )
+    });
 
     return (
         // ">"

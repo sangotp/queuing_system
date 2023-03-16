@@ -1,0 +1,1 @@
+export * as QSTypography from './QSTypography'

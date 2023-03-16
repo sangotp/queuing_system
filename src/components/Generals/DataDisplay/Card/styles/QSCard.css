@@ -1,0 +1,38 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.qs-card {
+  box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+  border-radius: 16px;
+}
+.qs-card .ant-card-body {
+  padding: 1rem 1.5rem;
+}/*# sourceMappingURL=QSCard.css.map */

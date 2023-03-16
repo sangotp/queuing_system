@@ -1,0 +1,132 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.table-header-row {
+  margin-bottom: 1rem;
+}
+.table-header-row .table-header-col .table-header-title {
+  color: #282739 !important;
+  font: normal 600 16px/24px "Nunito" !important;
+  margin-bottom: 0.25rem !important;
+}
+.table-header-row .table-header-col:not(.table-header-row .table-header-col:last-child) {
+  margin-inline-end: 1.5rem;
+}
+.table-header-row .table-header-col .table-header-default-select:hover .ant-select-selector, .table-header-row .table-header-col .table-header-default-select:active .ant-select-selector {
+  border-color: #ff7506 !important;
+}
+.table-header-row .table-header-col .table-header-default-select.ant-select-focused .ant-select-selector {
+  border-color: #ff7506 !important;
+  box-shadow: 0 0 0 2px rgba(255, 200, 155, 0.1);
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-selector {
+  padding: 0.625rem 0.75rem;
+  height: 44px;
+  line-height: initial;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-selector::after {
+  line-height: 1.5rem;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-selector .ant-select-selection-search {
+  font: normal 400 16px/24px "Nunito" !important;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-selector .ant-select-selection-item {
+  font: normal 400 16px/24px "Nunito" !important;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-dropdown {
+  padding: 0.5rem 0;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-dropdown .ant-select-item {
+  padding: 0.625rem 0.75rem;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-dropdown .ant-select-item .ant-select-item-option-content {
+  color: #535261;
+  font: normal 400 16px/24px "Nunito";
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-dropdown .ant-select-item.ant-select-item-option-active {
+  background-color: #fff2e7;
+}
+.table-header-row .table-header-col .table-header-default-select .ant-select-dropdown .ant-select-item.ant-select-item-option-selected {
+  background-color: #fff2e7;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input {
+  font: normal 400 16px/22px "Nunito";
+  padding: 0.6875rem 0.75rem;
+  height: 44px;
+  border-radius: 8px 0px 0px 8px;
+  border-right: 0;
+  color: #535261 !important;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input::placeholder {
+  color: #a9a9b0;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input:hover, .table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input:hover + .ant-input-group-addon > .ant-input-search-button {
+  border-color: #ff7506;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input:focus, .table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input:focus + .ant-input-group-addon > .ant-input-search-button {
+  border-color: #ff7506;
+  box-shadow: 0 0 0 2px rgba(255, 200, 155, 0.1);
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input:has(+ .ant-input-group-addon > .ant-input-search-button:hover) {
+  border-color: #D4D4D7 !important;
+  color: #ff7506;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input-group-addon .ant-input-search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6875rem 0.75rem;
+  height: 44px;
+  border-radius: 0px 8px 8px 0px;
+  border-left: 0;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input-group-addon .ant-input-search-button .anticon svg {
+  width: 20px;
+  height: 20px;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input-group-addon .ant-input-search-button:hover {
+  border-color: #D4D4D7 !important;
+  color: #ff7506;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input-group-addon .ant-input-search-button:focus-visible {
+  outline: 2px solid #ffac6a;
+}
+.table-header-row .table-header-col .table-header-search-input .ant-input-wrapper .ant-input-group-addon .ant-input-search-button:active {
+  border-color: #D4D4D7;
+  color: #ff7506;
+}
+.table-header-row .table-header-col .table-header-default-select, .table-header-row .table-header-col .table-header-search-input {
+  width: min(100vw - 3rem, 300px) !important;
+}
+
+.margin-start-auto {
+  margin-inline-start: auto;
+}/*# sourceMappingURL=TableHeader.css.map */

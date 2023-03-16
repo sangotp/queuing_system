@@ -1,0 +1,27 @@
+@import '../../../../../../styles/global';
+
+.paragraph-ellipsis {
+  position: relative;
+  // 23ch or 178px
+  max-width: 23ch;
+  margin-bottom: 0 !important;
+  .ant-typography-expand {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    margin: 0;
+    color: #4277FF;
+    font: $-font-14-r;
+    text-decoration: underline;
+  }
+
+  &:has(> .ant-typography-expand)
+  {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+// General
+.hide {
+  display: none;
+}
