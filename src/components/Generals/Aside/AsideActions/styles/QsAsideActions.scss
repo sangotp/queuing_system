@@ -1,0 +1,46 @@
+@import '../../../../styles/global';
+
+.qs-aside-space {
+  .qs-aside-btn-action {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background-color: $-orange-50;
+    padding: 0.75rem 0.25rem;
+    width: 80px;
+    height: auto;
+    border: 0;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px 0px 0px 8px;
+
+    &:hover {
+      box-shadow: 0px 0px 12px #E7E9F2;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $-orange-300;
+    }
+
+    svg {
+      border-radius: 8px;
+      width: 28px;
+      height: 28px;
+    }
+
+    span {
+      font: normal 600 14px/19px 'Nunito';
+      color: $-orange-500;
+      white-space: normal;
+      text-align: center;
+      width: min(100vw - 3rem, 70px);
+    }
+  }
+}
+
+.qs-aside-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}

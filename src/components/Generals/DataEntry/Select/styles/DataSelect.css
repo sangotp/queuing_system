@@ -1,0 +1,142 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.qs-default-select {
+  min-width: 300px !important;
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown {
+  padding: 0.5rem 0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown .rc-virtual-list-scrollbar {
+  width: 4px !important;
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown .rc-virtual-list-scrollbar .rc-virtual-list-scrollbar-thumb {
+  background: #FFC89B !important;
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown .ant-select-item {
+  padding: 0.625rem 0.75rem;
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown .ant-select-item .ant-select-item-option-content {
+  color: #535261;
+  font: normal 400 16px/24px "Nunito";
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown .ant-select-item.ant-select-item-option-active {
+  background-color: #fff2e7;
+}
+.qs-default-select div:has(> .ant-select-dropdown) .ant-select-dropdown .ant-select-item.ant-select-item-option-selected {
+  background-color: #fff2e7;
+}
+.qs-default-select:hover .ant-select-selector, .qs-default-select:active .ant-select-selector {
+  border-color: #ffac6a !important;
+}
+.qs-default-select.ant-select-focused .ant-select-selector {
+  border-color: #ffac6a !important;
+  box-shadow: 0 0 0 2px rgba(255, 227, 205, 0.4) !important;
+}
+.qs-default-select .ant-select-selector {
+  padding: 0.625rem 0.75rem !important;
+  height: 44px !important;
+  line-height: initial !important;
+}
+.qs-default-select .ant-select-selector::after {
+  line-height: 1.5rem;
+}
+.qs-default-select .ant-select-selector:not(.ant-select-item-option-state):has(.ant-select-selection-item-remove):has(.ant-select-selection-item-content) {
+  height: auto !important;
+}
+.qs-default-select .ant-select-selector:not(.ant-select-item-option-state):has(.ant-select-selection-item-remove):has(.ant-select-selection-item-content) .ant-select-selection-search > input {
+  padding-bottom: 0 !important;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-search > input {
+  padding-bottom: 10px !important;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-placeholder {
+  inset-inline: 12px;
+}
+.qs-default-select .ant-select-selector .ant-select-selection-search {
+  font: normal 400 16px/24px "Nunito" !important;
+  color: #282739;
+}
+.qs-default-select .ant-select-selector .ant-select-selection-placeholder {
+  color: #a9a9b0;
+  font: normal 400 16px/24px "Nunito" !important;
+}
+.qs-default-select .ant-select-selector .ant-select-selection-item {
+  color: #535261;
+  font: normal 400 16px/24px "Nunito" !important;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-search):has(> .ant-select-selection-placeholder) {
+  padding: 0.625rem 0.75rem !important;
+  border: 1.5px solid #D4D4D7;
+  height: 44px !important;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-search):has(> .ant-select-selection-placeholder) .ant-select-selection-placeholder {
+  font: normal 400 16px/24px "Nunito" !important;
+  color: #a9a9b0;
+  height: auto;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) {
+  padding: 0.625rem 0.75rem !important;
+  border: 1.5px solid #D4D4D7;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow {
+  align-items: center;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow:has(.ant-select-selection-item) {
+  margin-bottom: 34px;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-item {
+  padding: 0.25rem 0.75rem;
+  height: auto;
+  background: #ffac6a;
+  box-shadow: 0px 0px 6px #E7E9F2;
+  border-radius: 9px;
+  justify-content: flex-start;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-item .ant-select-selection-item-content {
+  color: #FFFFFF;
+  font: normal 700 14px/19px "Nunito";
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-item .ant-select-selection-item-remove {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  font: normal 700 14px/19px "Nunito";
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-search {
+  margin-inline-start: 0;
+}
+.qs-default-select .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-placeholder {
+  font: normal 400 16px/24px "Nunito" !important;
+  color: #a9a9b0;
+  height: auto;
+}/*# sourceMappingURL=DataSelect.css.map */

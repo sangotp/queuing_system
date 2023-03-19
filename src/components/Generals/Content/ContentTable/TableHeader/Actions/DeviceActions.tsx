@@ -28,7 +28,7 @@ export const DeviceActions = () => {
               { value: 'active', label: 'Hoạt động' },
               { value: 'inactive', label: 'Ngưng hoạt động' },
             ]} 
-            className='table-header-default-select select-activities'
+            className='select-activities'
             getPopupContainer={() => document.querySelector('.select-activities')!}
         />
       </Col>
@@ -43,7 +43,7 @@ export const DeviceActions = () => {
               { value: 'connected', label: 'Kết nối' },
               { value: 'disconnected', label: 'Mất kết nối' },
             ]} 
-            className='table-header-default-select select-connection'
+            className='select-connection'
             getPopupContainer={() => document.querySelector('.select-connection')!}
         />
       </Col>

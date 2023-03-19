@@ -145,9 +145,20 @@ export const Menubar = () => {
             }}
             onCollapse={(collapse, type) => {
             //  console.log(collapse, type)
-                document.querySelector('.logout')?.classList.toggle('hide')
-                document.querySelector('.topbar')?.classList.toggle('reset-margin-start-menubar')
-                document.querySelector('.content-container')?.classList.toggle('reset-margin-start-menubar')
+                // Logout Button
+                collapse ? document.querySelector('.logout')?.classList.add('hide') : document.querySelector('.logout')?.classList.remove('hide')
+
+                // Topbar
+                collapse ? document.querySelector('.topbar')?.classList.add('reset-margin-start-menubar') : document.querySelector('.topbar')?.classList.remove('reset-margin-start-menubar')
+
+                // Content
+                collapse ? document.querySelector('.content-container')?.classList.add('reset-margin-start-menubar') : document.querySelector('.content-container')?.classList.remove('reset-margin-start-menubar')
+
+                // Content Card Form
+                collapse ? document.querySelector('.qs-card-form')?.classList.add('qs-card-form-no-menubar') : document.querySelector('.qs-card-form')?.classList.remove('qs-card-form-no-menubar')
+
+                // Actions Card Form Space
+                collapse ? document.querySelector('.form-actions-space')?.classList.add('form-actions-space-no-menubar') : document.querySelector('.form-actions-space')?.classList.remove('form-actions-space-no-menubar')
             }}
         >
             <div className='alta-logo'>

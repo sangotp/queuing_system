@@ -29,62 +29,10 @@
   font-family: "Nunito";
 }
 
+.form-control .qs-form-item {
+  margin-bottom: 1rem;
+}
 .form-control label {
   font: normal 600 16px/24px "Nunito" !important;
   color: #282739 !important;
-}
-.form-control input {
-  border: 1.5px solid #D4D4D7;
-  border-radius: 8px;
-  width: min(100vw - 4.5rem, 540px);
-  padding: 0.625rem 0.75rem;
-}
-.form-control input::placeholder {
-  color: #a9a9b0;
-  font: normal 400 16px/24px "Nunito";
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-search):has(> .ant-select-selection-placeholder) {
-  padding: 0.625rem 0.75rem !important;
-  border: 1.5px solid #D4D4D7;
-  height: 44px !important;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-search):has(> .ant-select-selection-placeholder) .ant-select-selection-placeholder {
-  font: normal 400 16px/24px "Nunito" !important;
-  color: #a9a9b0;
-  height: auto;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) {
-  padding: 0.625rem 0.75rem !important;
-  border: 1.5px solid #D4D4D7;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow {
-  align-items: center;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow:has(.ant-select-selection-item) {
-  margin-bottom: 34px;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-item {
-  padding: 0.25rem 0.75rem;
-  height: auto;
-  background: #ffac6a;
-  box-shadow: 0px 0px 6px #E7E9F2;
-  border-radius: 9px;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-item .ant-select-selection-item-content {
-  color: #FFFFFF;
-  font: normal 700 14px/19px "Nunito";
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-item .ant-select-selection-item-remove {
-  width: 20px;
-  height: 20px;
-  color: #ffffff;
-  font: normal 700 14px/19px "Nunito";
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-overflow .ant-select-selection-search {
-  margin-inline-start: 0;
-}
-.form-control .ant-select-selector:has(> .ant-select-selection-overflow) .ant-select-selection-placeholder {
-  font: normal 400 16px/24px "Nunito" !important;
-  color: #a9a9b0;
-  height: auto;
 }/*# sourceMappingURL=Form.css.map */
