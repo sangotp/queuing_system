@@ -29,11 +29,41 @@
   font-family: "Nunito";
 }
 
-h2 {
+h2.qs-typography-title {
   font: normal 700 20px/30px "Nunito" !important;
   margin-bottom: 1.25rem !important;
 }
 
 .qs-typography-title {
   color: #ff7506 !important;
+}
+
+.qs-typography-text {
+  color: #7e7d88;
+  font: normal 400 14px/21px "Nunito";
+}
+
+.qs-typography-btn {
+  color: #282739;
+  font: normal 700 16px/22px "Nunito";
+}
+
+.qs-typography-group {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.qs-typography-group .ant-space-item:has(> .qs-typography-group-title) {
+  flex: 1;
+}
+.qs-typography-group .ant-space-item:has(> .qs-typography-group-children) {
+  flex: 3;
+}
+.qs-typography-group .qs-typography-group-title {
+  margin-bottom: 0;
+  color: #282739;
+  font: normal 600 16px/24px "Nunito";
+}
+.qs-typography-group .qs-typography-group-children {
+  color: #535261;
+  font: normal 400 16px/24px "Nunito";
 }/*# sourceMappingURL=QSTypography.css.map */

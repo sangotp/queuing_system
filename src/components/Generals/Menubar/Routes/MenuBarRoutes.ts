@@ -29,6 +29,20 @@ const MenuBarRoutes = [
           pathName: 'create device',
           parentPaths: ['device']
         },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['device', 'details'],
+          pathName: 'details device',
+          parentPaths: ['device']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['device', 'update'],
+          pathName: 'update device',
+          parentPaths: ['device']
+        },
       ]
     },
     {

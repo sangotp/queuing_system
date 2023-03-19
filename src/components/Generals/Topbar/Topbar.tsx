@@ -10,6 +10,7 @@ import { Notification } from './TopbarIcons/Notification';
 import { useSelector } from 'react-redux';
 import { reducerTypes } from '../../../state/reducers';
 import { ProgressionGrantedDateFormatter } from '../../../utils/FormatDate';
+import { UpdatePath } from '../../../utils/RUDPath';
 
 const { Header } = Layout
 
@@ -51,11 +52,12 @@ export const Topbar = () => {
     return (
         // ">"
         <Header className='topbar' >
-            <Breadcrumb separator={React.createElement(ArrowRight)}>
-                {breadcrumbItems.map((item) => {
+            <Breadcrumb separator={React.createElement(ArrowRight)} className='qs-breadcrumb'>
+                {breadcrumbItems.map((item, index) => {
                     return (
-                        <Breadcrumb.Item key={item}>
-                            <Button type="text" className='text-btn'>{item}</Button>
+                        <Breadcrumb.Item key={index}>
+                            {/* <Button type="text" className='text-btn'>{item}</Button> */}
+                            {item}
                         </Breadcrumb.Item>
                     )
                 })}

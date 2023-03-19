@@ -1,0 +1,22 @@
+@import '../../../styles/global';
+
+.form-space-desc {
+  margin-bottom: 4.75rem;
+
+  .ant-space-item {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.form-actions-space {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 32px !important;
+  width: min(100vw - 3rem - 200px, 1152px);
+
+  &.form-actions-space-no-menubar {
+    width: min(100vw - 3rem, 1152px);
+  }
+}

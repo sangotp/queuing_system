@@ -3,8 +3,17 @@
 .qs-card {
   box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
   border-radius: 16px;
+  min-height: 604px;
 
   .ant-card-body {
     padding: 1rem 1.5rem;
+  }
+}
+
+.qs-card-form {
+  width: min(100vw - 3rem - 200px, 1152px);
+  
+  &.qs-card-form-no-menubar {
+    width: min(100vw - 3rem, 1152px);
   }
 }

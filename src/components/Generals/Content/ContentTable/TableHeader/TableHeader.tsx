@@ -41,6 +41,6 @@ const GenerateActions = (pathName: string) => {
 export const TableHeader = () => {
   const paths = ReadPath()
   return (
-    GenerateActions(paths[paths.length - 1].toString())
+    paths[paths.length - 1] && GenerateActions(paths[paths.length - 1].toString())
   )
 }

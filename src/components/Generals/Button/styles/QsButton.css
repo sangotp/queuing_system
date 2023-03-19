@@ -1,0 +1,90 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.qs-cancel-btn {
+  /* Orange/$-Orange-50 */
+  background: #fff2e7;
+  /* Orange/$-Orange-400 */
+  border: 1.5px solid #ff9138;
+  /* down */
+  box-shadow: 0px 0px 6px #E7E9F2;
+  border-radius: 8px;
+  /* Width */
+  min-width: 147px;
+  /* Height */
+  height: 48px !important;
+  /* Padding */
+  padding: 0.8125rem 1.5rem;
+  /* Event */
+  /* Text */
+}
+.qs-cancel-btn:hover {
+  border-color: #ff7506 !important;
+}
+.qs-cancel-btn:active {
+  border-color: #BF5805 !important;
+}
+.qs-cancel-btn:focus-visible {
+  outline: 2px solid #FFC89B !important;
+}
+.qs-cancel-btn span {
+  color: #ff9138;
+  font: normal 700 16px/22px "Nunito";
+}
+
+.qs-submit-btn {
+  /* Orange/$-Orange-50 */
+  background: #ff9138;
+  /* down */
+  box-shadow: 0px 0px 6px #E7E9F2;
+  border-radius: 8px;
+  /* Width */
+  min-width: 147px;
+  /* Height */
+  height: 48px !important;
+  /* Padding */
+  padding: 0.8125rem 1.5rem;
+  /* Event */
+  /* Text */
+}
+.qs-submit-btn:hover {
+  border-color: #ff7506 !important;
+}
+.qs-submit-btn:active {
+  border-color: #BF5805 !important;
+}
+.qs-submit-btn:focus-visible {
+  outline: 2px solid #FFC89B !important;
+}
+.qs-submit-btn span {
+  color: #ffffff;
+  font: normal 700 16px/22px "Nunito";
+}/*# sourceMappingURL=QsButton.css.map */

@@ -1,10 +1,44 @@
 @import '../../../styles/global';
 
-h2 {
+h2.qs-typography-title {
   font: $-font-20-b !important;
   margin-bottom: 1.25rem !important;
 }
 
 .qs-typography-title {
   color: $-orange-500 !important;
+}
+
+.qs-typography-text {
+  color: $-gray-300;
+  font: $-font-14-r;
+}
+
+.qs-typography-btn {
+  color: $-gray-500;
+  font: normal 700 16px/22px 'Nunito';
+}
+
+.qs-typography-group {
+  margin-bottom: 1rem;
+  width: 100%;
+
+  .ant-space-item:has(> .qs-typography-group-title) {
+    flex: 1;
+  }
+
+  .ant-space-item:has(> .qs-typography-group-children) {
+    flex: 3;
+  }
+  
+  .qs-typography-group-title {
+    margin-bottom: 0;
+    color: $-gray-500;
+    font: $-font-16-s;
+  }
+
+  .qs-typography-group-children {
+    color: $-gray-400;
+    font: $-font-16-r;
+  }
 }
