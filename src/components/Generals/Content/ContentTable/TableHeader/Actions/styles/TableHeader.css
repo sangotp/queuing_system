@@ -127,6 +127,53 @@
   width: min(100vw - 3rem, 300px) !important;
 }
 
+.search-input-lite .ant-input-wrapper .ant-input {
+  font: normal 400 16px/22px "Nunito";
+  padding: 0.6875rem 0.75rem;
+  height: 44px;
+  border-radius: 8px 0px 0px 8px;
+  border-right: 0;
+  color: #535261 !important;
+}
+.search-input-lite .ant-input-wrapper .ant-input::placeholder {
+  color: #a9a9b0;
+}
+.search-input-lite .ant-input-wrapper .ant-input:hover, .search-input-lite .ant-input-wrapper .ant-input:hover + .ant-input-group-addon > .ant-input-search-button {
+  border-color: #ff7506 !important;
+}
+.search-input-lite .ant-input-wrapper .ant-input:focus, .search-input-lite .ant-input-wrapper .ant-input:focus + .ant-input-group-addon > .ant-input-search-button {
+  border-color: #ff7506;
+  box-shadow: 0 0 0 2px rgba(255, 200, 155, 0.1);
+}
+.search-input-lite .ant-input-wrapper .ant-input:has(+ .ant-input-group-addon > .ant-input-search-button:hover) {
+  border-color: #D4D4D7 !important;
+  color: #ff7506;
+}
+.search-input-lite .ant-input-wrapper .ant-input-group-addon .ant-input-search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6875rem 0.75rem;
+  height: 44px;
+  border-radius: 0px 8px 8px 0px;
+  border-left: 0;
+}
+.search-input-lite .ant-input-wrapper .ant-input-group-addon .ant-input-search-button .anticon svg {
+  width: 20px;
+  height: 20px;
+}
+.search-input-lite .ant-input-wrapper .ant-input-group-addon .ant-input-search-button:hover {
+  border-color: #D4D4D7 !important;
+  color: #ff7506 !important;
+}
+.search-input-lite .ant-input-wrapper .ant-input-group-addon .ant-input-search-button:focus-visible {
+  outline: 2px solid #ffac6a;
+}
+.search-input-lite .ant-input-wrapper .ant-input-group-addon .ant-input-search-button:active {
+  border-color: #D4D4D7;
+  color: #ff7506;
+}
+
 .margin-start-auto {
   margin-inline-start: auto;
 }/*# sourceMappingURL=TableHeader.css.map */

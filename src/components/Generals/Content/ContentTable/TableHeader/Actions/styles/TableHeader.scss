@@ -133,6 +133,71 @@
   }
 }
 
+.search-input-lite {
+  .ant-input-wrapper {
+    .ant-input {
+      font: normal 400 16px/22px 'Nunito';
+      padding: 0.6875rem 0.75rem;
+      height: 44px;
+      border-radius: 8px 0px 0px 8px;
+      border-right: 0;
+      color: $-gray-400 !important;
+
+      &::placeholder {
+        color: $-gray-200;
+      }
+
+      &:hover, &:hover + .ant-input-group-addon > .ant-input-search-button {
+        border-color: $-orange-500 !important;
+      }
+
+      &:focus, &:focus + .ant-input-group-addon > .ant-input-search-button {
+        border-color: $-orange-500;
+        box-shadow: 0 0 0 2px rgba($-orange-200, 0.1);
+      }
+
+      &:has(+ .ant-input-group-addon > .ant-input-search-button:hover) {
+        border-color: $-gray-100 !important;
+        color: $-orange-500;
+      }
+    }
+
+    .ant-input-group-addon {
+      .ant-input-search-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6875rem 0.75rem;
+        height: 44px;
+        border-radius: 0px 8px 8px 0px;
+        border-left: 0;
+
+        .anticon {
+          
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &:hover {
+          border-color: $-gray-100 !important;
+          color: $-orange-500 !important;
+        }
+
+        &:focus-visible {
+          outline: 2px solid $-orange-300;
+        }
+
+        &:active {
+          border-color: $-gray-100;
+          color: $-orange-500;
+        }
+      }
+    }
+  }
+}
+
 .margin-start-auto {
   margin-inline-start: auto;
 }

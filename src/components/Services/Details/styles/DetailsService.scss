@@ -1,0 +1,68 @@
+@import '../../../styles/global';
+
+.service-card-space {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .ant-space-item:first-child {
+    flex: 1;
+  }
+
+  .ant-space-item:last-child {
+    flex: 2 1;
+  }
+}
+
+.progression-rules {
+  color: $-gray-500 !important;
+  font: $-font-16-r !important;
+}
+
+.qs-card-details {
+  width: 100%;
+
+  .ant-row {
+    .ant-col {
+      .ant-space {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+}
+
+.mb-12 {
+  margin-bottom: 0.75rem !important;
+}
+
+.qs-aside-btn-fixed-card {
+  top: calc(88px + 16px + 52px);
+  right: 0;
+}
+
+.progression-actions-bar {
+  margin-bottom: 1rem;
+  gap: 12px 0;
+
+  .ant-typography {
+    font: $-font-16-s;
+    color: $-gray-500;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+  }
+
+  .qs-default-select {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .qs-range-select {
+    min-width: 100% !important;
+    white-space: nowrap;
+  }
+
+  .ant-input-search {
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}

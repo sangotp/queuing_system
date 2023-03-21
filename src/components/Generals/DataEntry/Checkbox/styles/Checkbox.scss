@@ -1,0 +1,57 @@
+@import '../../../../styles/global';
+
+.qs-checkbox-group {
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1.375rem;
+
+  label {
+    margin-inline-start: 0 !important;
+    align-items: center;
+
+    .ant-checkbox {
+      top: 0;
+      .ant-checkbox-inner {
+        width: 20px !important;
+        height: 20px !important;
+        border: 1.5px solid #4277FF;
+      }
+    }
+
+    &:hover {
+      .ant-checkbox-inner {
+        border-color: #3055b5 !important;
+      }
+    }
+  }
+
+  .qs-checkbox-group-space {
+    gap: 15px !important;
+  }
+}
+
+// Suffix
+.qs-checkbox-group-suffix-space {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 !important;
+
+  .qs-checkbox-group-suffix-input {
+    width: 7ch !important;
+  }
+}
+
+.qs-checkbox-group-suffix-text {
+  color: $-gray-500;
+  font: $-font-16-s;
+}
+
+.qs-checkbox-group-suffix-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  .qs-checkbox-group-suffix-text {
+    margin-inline: 0.75rem;
+    white-space: nowrap;
+  }
+}

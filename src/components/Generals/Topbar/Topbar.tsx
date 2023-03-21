@@ -10,7 +10,6 @@ import { Notification } from './TopbarIcons/Notification';
 import { useSelector } from 'react-redux';
 import { reducerTypes } from '../../../state/reducers';
 import { ProgressionGrantedDateFormatter } from '../../../utils/FormatDate';
-import { UpdatePath } from '../../../utils/RUDPath';
 
 const { Header } = Layout
 

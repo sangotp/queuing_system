@@ -1,6 +1,9 @@
-import { Select, SelectProps, DatePicker, DatePickerProps, Space } from "antd"
-import { ArrowDown } from "./SelectIcons"
+import { Select, SelectProps, DatePicker } from "antd"
+import { ArrowDown, ArrowRight } from "./SelectIcons"
+import type { RangePickerProps } from 'antd/es/date-picker/index'
 import './styles/DataSelect.css'
+
+
 
 export const DefaultSelect = (props: SelectProps) => {
   return (
@@ -12,12 +15,10 @@ export const DefaultSelect = (props: SelectProps) => {
   )
 }
 
-export const DateRangeSelect = (props: DatePickerProps) => {
+export const DateRangeSelect = (props: RangePickerProps) => {
+  const { RangePicker } = DatePicker
+
   return (
-    <Space>
-      <DatePicker {...props} />
-      <span>&gt;</span>
-      <DatePicker {...props} />
-    </Space>
+    <RangePicker {...props} placeholder={['2023-03-19', '2023-03-25']} separator={ArrowRight} suffixIcon={false} getPopupContainer={() => document.querySelector('.qs-range-select')!} className={props.className ? `qs-range-select ${props.className}` : 'qs-range-select'} /> 
   )
 }

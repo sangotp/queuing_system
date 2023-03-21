@@ -120,4 +120,8 @@
 .table-body-main-table .custom-table-pagination .ant-pagination-item.ant-pagination-item-active a {
   color: #ffffff;
   font: normal 700 16px/22px "Nunito";
+}
+.table-body-main-table .absolute-table-pagination {
+  position: absolute;
+  right: 0;
 }/*# sourceMappingURL=TableBody.css.map */

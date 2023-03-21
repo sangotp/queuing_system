@@ -1,6 +1,5 @@
 import { Row, Col, Typography } from "antd"
 import { DefaultSelect, DateRangeSelect } from "../../../../DataEntry/Select"
-import { DatePickerProps } from "antd";
 import { SearchInput } from "../../../../DataEntry/Input";
 
 // // Select
@@ -8,10 +7,6 @@ import { SearchInput } from "../../../../DataEntry/Input";
 //   console.log(`selected ${value}`);
 // };
 
-// Date Select
-const onChange: DatePickerProps['onChange'] = (date, dateString) => {
-  console.log(date, dateString);
-};
 
 // // Search Input
 // const onSearch = (value: string) => console.log(value);
@@ -21,7 +16,7 @@ export const ReportActions = () => {
     <Row gutter={8} className='table-header-row'>
       <Col className='table-header-col'>
         <Typography.Title level={3}>Chọn thời gian</Typography.Title>
-        <DateRangeSelect onChange={onChange} />
+        <DateRangeSelect />
       </Col>
     </Row>
   )

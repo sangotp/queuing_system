@@ -1,8 +1,10 @@
 @import '../../../styles/global';
 
-h2.qs-typography-title {
-  font: $-font-20-b !important;
-  margin-bottom: 1.25rem !important;
+h2 {
+  &.qs-typography-title {
+    font: $-font-20-b;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .qs-typography-title {

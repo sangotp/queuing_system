@@ -1,15 +1,16 @@
 import { Table } from 'antd'
 import { DeviceType, ServiceType, ProgressionType, ReportType, UserRoleType, UserType, UserActivityLogType } from '../../../../../state/data_types';
-import { DeviceCAD, ServiceCAD, ProgressionCAD, ReportCAD, UserRoleCAD, UserCAD, UserActivityLogCAD } from './ColumnsAndDataSource'
+import { DeviceCAD, ServiceCAD, ProgressionCAD, ProgressionLiteCAD, ReportCAD, UserRoleCAD, UserCAD, UserActivityLogCAD } from './ColumnsAndDataSource'
 import { ArrowLeftIcon, ArrowRightIcon } from './PaginationIcons';
 import './styles/TableBody.css'
 
 type TableBodyProps = {
   type: 'Device[]' | 'Service[]' | 'Progression[]' | 'Report[]' | 'UserRole[]' | 'User[]' | 'UserActivityLog[]'
   data:  DeviceType[] | ServiceType[] | ProgressionType[] | ReportType[] | UserRoleType[] | UserType[] | UserActivityLogType[]
+  isLite?: boolean
 }
 
-const GenerateTable = (type: string, data: DeviceType[] | ServiceType[] | ProgressionType[] | ReportType[] | UserRoleType[] | UserType[] | UserActivityLogType[]) => {
+const GenerateTable = (type: string, data: DeviceType[] | ServiceType[] | ProgressionType[] | ReportType[] | UserRoleType[] | UserType[] | UserActivityLogType[], isLite: boolean | undefined) => {
   switch(type)
   {
     case 'Device[]':
@@ -18,11 +19,21 @@ const GenerateTable = (type: string, data: DeviceType[] | ServiceType[] | Progre
       )
     case 'Service[]':
       return (
-        <Table dataSource={ServiceCAD.dataSource(data)} columns={ServiceCAD.Columns} className='table-body-main-table' />
+        <Table pagination={{ pageSize: 9, hideOnSinglePage: true, prevIcon: ArrowLeftIcon, nextIcon: ArrowRightIcon, className:'custom-table-pagination' }} dataSource={ServiceCAD.dataSource(data)} columns={ServiceCAD.Columns} className='table-body-main-table' />
       )
     case 'Progression[]':
+      if (isLite)
+      {
+        return (
+          <Table pagination={{ pageSize: 8, hideOnSinglePage: true, prevIcon: ArrowLeftIcon, nextIcon: ArrowRightIcon, className:'custom-table-pagination absolute-table-pagination' }} dataSource={ProgressionLiteCAD.dataSource(data)} columns={ProgressionLiteCAD.Columns} className='table-body-main-table' />
+          )
+      }
       return (
         <Table dataSource={ProgressionCAD.dataSource(data)} columns={ProgressionCAD.Columns} className='table-body-main-table' />
+      )
+    case 'ProgressionLite[]':
+      return (
+        <Table dataSource={ProgressionLiteCAD.dataSource(data)} columns={ProgressionLiteCAD.Columns} className='table-body-main-table' />
       )
     case 'Report[]':
       return (
@@ -45,8 +56,8 @@ const GenerateTable = (type: string, data: DeviceType[] | ServiceType[] | Progre
   }
 }
 
-export const TableBody = ({type, data}: TableBodyProps) => {
+export const TableBody = ({type, data, isLite}: TableBodyProps) => {
   return (
-    GenerateTable(type, data)
+    GenerateTable(type, data, isLite)
   )
 }
