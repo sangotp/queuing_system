@@ -139,4 +139,76 @@
   font: normal 400 16px/24px "Nunito" !important;
   color: #a9a9b0;
   height: auto;
+}
+
+.qs-range-select {
+  min-width: 320px !important;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  /* Dropdown Date Select */
+}
+.qs-range-select.ant-picker-focused {
+  box-shadow: none;
+}
+.qs-range-select .ant-picker-input {
+  background: #FFFFFF;
+  /* gray blue/gray 2 - stroke */
+  border: 1.5px solid #D4D4D7;
+  border-radius: 8px;
+}
+.qs-range-select .ant-picker-input input {
+  padding: 0.625rem 1rem;
+  color: #535261;
+}
+.qs-range-select .ant-picker-input input::placeholder {
+  font: normal 400 16px/24px "Nunito";
+  color: #a9a9b0;
+}
+.qs-range-select .ant-picker-active-bar {
+  margin-inline-start: 0;
+  background: #ff7506;
+}
+.qs-range-select .ant-picker-cell {
+  min-width: 36px;
+  min-height: 36px;
+  padding-inline: 3px;
+}
+.qs-range-select .ant-picker-cell::before {
+  background-color: transparent !important;
+  min-width: 36px;
+  height: 36px;
+}
+.qs-range-select .ant-picker-cell .ant-picker-cell-inner {
+  border-radius: 8px !important;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 36px;
+}
+.qs-range-select .ant-picker-cell::before, .qs-range-select .ant-picker-cell::after {
+  border-color: #ff7506 !important;
+  height: 36px !important;
+}
+.qs-range-select .ant-picker-cell-range-hover-start .ant-picker-cell-inner::after, .qs-range-select .ant-picker-cell-range-hover-end .ant-picker-cell-inner::after {
+  border-radius: 8px !important;
+  background: #FFC89B !important;
+  content: "";
+  inset-inline-end: 0 !important;
+  inset-inline-start: 0 !important;
+}
+.qs-range-select .ant-picker-cell-in-range::before {
+  background: #fff2e7 !important;
+}
+.qs-range-select .ant-picker-cell-range-start .ant-picker-cell-inner {
+  background: #ff7506 !important;
+}
+.qs-range-select .ant-picker-cell-range-end .ant-picker-cell-inner {
+  background: #ff7506 !important;
+}
+.qs-range-select .ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-color: #ff7506 !important;
 }/*# sourceMappingURL=DataSelect.css.map */

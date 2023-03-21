@@ -1,0 +1,86 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 20/20 Bold */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.service-card-space {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.service-card-space .ant-space-item:first-child {
+  flex: 1;
+}
+.service-card-space .ant-space-item:last-child {
+  flex: 2 1;
+}
+
+.progression-rules {
+  color: #282739 !important;
+  font: normal 400 16px/24px "Nunito" !important;
+}
+
+.qs-card-details {
+  width: 100%;
+}
+.qs-card-details .ant-row .ant-col .ant-space {
+  margin-bottom: 0.75rem;
+}
+
+.mb-12 {
+  margin-bottom: 0.75rem !important;
+}
+
+.qs-aside-btn-fixed-card {
+  top: 156px;
+  right: 0;
+}
+
+.progression-actions-bar {
+  margin-bottom: 1rem;
+  gap: 12px 0;
+}
+.progression-actions-bar .ant-typography {
+  font: normal 600 16px/24px "Nunito";
+  color: #282739;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+}
+.progression-actions-bar .qs-default-select {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+.progression-actions-bar .qs-range-select {
+  min-width: 100% !important;
+  white-space: nowrap;
+}
+.progression-actions-bar .ant-input-search {
+  min-width: 100% !important;
+  width: auto !important;
+}/*# sourceMappingURL=DetailsService.css.map */

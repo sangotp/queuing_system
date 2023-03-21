@@ -11,18 +11,18 @@ type GroupProps = {
 }
 
 export const Title = (props:TitleProps) => {
-  const { children } = props
+  const { children, className } = props
 
   return (
-    <Typography.Title {...props} className='qs-typography-title'>{children}</Typography.Title>
+    <Typography.Title {...props} className={className ? `qs-typography-title ${className}`: 'qs-typography-title'}>{children}</Typography.Title>
   )
 }
 
 export const Text = (props:TextProps) => {
-  const { children } = props
+  const { children, className } = props
 
   return (
-    <Typography.Text {...props} className='qs-typography-text'>{children}</Typography.Text>
+    <Typography.Text {...props} className={className ? `qs-typography-text ${className}`: 'qs-typography-text'}>{children}</Typography.Text>
   )
 }
 

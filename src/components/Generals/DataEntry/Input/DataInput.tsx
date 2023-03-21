@@ -1,4 +1,5 @@
 import { Input, InputProps } from "antd"
+import type { TextAreaProps } from 'antd/es/input/TextArea'
 import './styles/DataInput.css'
 
 type SearchInputProps = {
@@ -16,5 +17,15 @@ export const SearchInput = (props: SearchInputProps) => {
 export const QsInput = (props: InputProps) => {
   return (
     <Input {...props} className={props.className ? `${props.className} qs-input` : 'qs-input'} />
+  )
+}
+
+export const QsTextArea = (props: TextAreaProps) => {
+  const { TextArea } = Input
+
+  return (
+    <TextArea
+      {...props} className={props.className ? `${props.className} qs-textarea` : 'qs-textarea'}
+    />
   )
 }

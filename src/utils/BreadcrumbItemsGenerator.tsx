@@ -11,17 +11,38 @@ export const BreadcrumbItemsGenerator = () => {
     const { id } = useParams()
     
     // Path Defined
+
+    /* Dashboard */
     const dashboard = JSON.stringify(['/'])
+
+    /* Device */
     const device = JSON.stringify(['device'])
     const deviceDetails = JSON.stringify(['device', 'details'])
     const deviceUpdate = JSON.stringify(['device', 'update'])
     const deviceCreate = JSON.stringify(['device', 'create'])
+
+    /* Service */
     const service = JSON.stringify(['service'])
+    const serviceDetails = JSON.stringify(['service', 'details'])
+    const serviceUpdate = JSON.stringify(['service', 'update'])
+    const serviceCreate = JSON.stringify(['service', 'create'])
+
+    /* Progression */
     const progression = JSON.stringify(['progression'])
+
+    /* Report */
     const report = JSON.stringify(['report'])
+
+    /* Role */
     const role = JSON.stringify(['role'])
+
+    /* Account */
     const account = JSON.stringify(['account'])
+
+    /* Log */
     const log = JSON.stringify(['log'])
+
+    /* Profile */
     const profile = JSON.stringify(['profile'])
 
     // Path To Breadcrumb Item
@@ -77,6 +98,30 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/service')}>Danh sách dịch vụ</Button>)
             break;
+        case serviceDetails:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Dịch vụ</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/service')}>Danh sách dịch vụ</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/details/${id}`)}>Chi tiết dịch vụ</Button>)
+            break;
+        case serviceUpdate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Dịch vụ</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/service')}>Danh sách dịch vụ</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/update/${id}`)}>Cập nhật dịch vụ</Button>)
+        break;
+        case serviceCreate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Dịch vụ</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/service')}>Danh sách dịch vụ</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/create`)}>Thêm dịch vụ</Button>)
+        break;
         case progression:
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cấp số</Button>)

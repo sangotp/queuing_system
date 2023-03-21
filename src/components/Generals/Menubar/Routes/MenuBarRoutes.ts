@@ -52,7 +52,30 @@ const MenuBarRoutes = [
       pathName: 'service',
       textDisplay: 'Dịch vụ',
       icon: Question,
-      children: []
+      children: [],
+      actionLinks: [
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['service', 'create'],
+          pathName: 'create service',
+          parentPaths: ['service']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['service', 'details'],
+          pathName: 'details service',
+          parentPaths: ['service']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['service', 'update'],
+          pathName: 'update service',
+          parentPaths: ['service']
+        },
+      ]
     },
     {
       type: 'menuItem',

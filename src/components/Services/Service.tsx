@@ -1,15 +1,29 @@
 import { useSelector } from "react-redux";
 import { reducerTypes } from "../../state/reducers";
-import { ContentSpace, ContentTitle, TableHeader, TableBody } from '../Generals';
+import { AddSquareIcon } from '../Generals';
+import { ContentSpace, ContentTitle, TableHeader, TableBody, QsAsideActions } from '../Generals';
+import { useNavigate } from "react-router-dom";
+import './styles/Service.css'
 
 export const Service = () => {
     const services = useSelector((state: reducerTypes) => state.services)
+
+    const navigate = useNavigate();
+
+    const handleCreateServiceClick = () => {
+        navigate('/service/create')
+    }
 
     return (
         <ContentSpace>
             <ContentTitle title='Quản lý dịch vụ' />
             <TableHeader />
             <TableBody type='Service[]' data={services} />
+            <QsAsideActions actions={
+                [
+                    {icon: AddSquareIcon, onClick: handleCreateServiceClick, children: <><span>Thêm</span><br/><span>dịch vụ</span></> ,className:'qs-aside-btn-fixed-table'},
+                ]
+            } />
             {/* <div>
                 <h1>Quản lý dịch vụ</h1>
                 <table style={{ width: '100%', border: '1px solid black' }}>
