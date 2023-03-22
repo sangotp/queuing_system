@@ -126,7 +126,23 @@ const MenuBarRoutes = [
           pathName: 'role',
           textDisplay: 'Vai trò',
           icon: null,
-          children: []
+          children: [],
+          actionLinks: [
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['role', 'create'],
+              pathName: 'create role',
+              parentPaths: ['role']
+            },
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['role', 'update'],
+              pathName: 'update role',
+              parentPaths: ['role']
+            },
+          ]
         },
         {
           type: 'subMenuItem',

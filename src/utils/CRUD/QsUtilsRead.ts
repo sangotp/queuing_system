@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import type { reducerTypes } from "../../state/reducers"
-import type { DeviceType, ProgressionType, ServiceType } from "../../state/data_types"
+import type { DeviceType, ProgressionType, ServiceType, UserRoleType } from "../../state/data_types"
 
 export const Device = (id: string) => {
   const devices = useSelector((state:reducerTypes) => state.devices)
@@ -18,4 +18,10 @@ export const Progression = (id: string) => {
   const progressions = useSelector((state:reducerTypes) => state.progressions)
 
   return progressions.find((progression) => progression.doc_id === id) as ProgressionType
+}
+
+export const Role = (id: string) => {
+  const roles = useSelector((state:reducerTypes) => state.userRoles)
+
+  return roles.find((role) => role.doc_id === id) as UserRoleType
 }

@@ -34,7 +34,7 @@ export const Columns = [
     dataIndex: 'userRoleUpdateAction',
     key: 'userRoleUpdateAction',
     render: (_, record) => (
-      <Link to='#'>Cập nhật</Link>
+      <Link to={`/role/update/${record.key}`}>Cập nhật</Link>
     )
   },
 ] as ColumnsType<UserRoleDataType>
