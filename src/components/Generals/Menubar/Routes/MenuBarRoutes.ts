@@ -84,7 +84,23 @@ const MenuBarRoutes = [
       pathName: 'progression',
       textDisplay: 'Cấp số',
       icon: Stack,
-      children: []
+      children: [],
+      actionLinks: [
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['progression', 'create'],
+          pathName: 'create progression',
+          parentPaths: ['progression']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['progression', 'details'],
+          pathName: 'details progression',
+          parentPaths: ['progression']
+        },
+      ]
     },
     {
       type: 'menuItem',

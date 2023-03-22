@@ -128,7 +128,7 @@
     }
 
     .table-header-default-select, .table-header-search-input {
-      width: min(100vw - (3rem), 300px) !important;
+      min-width: 300px;
     }
   }
 }
@@ -198,6 +198,25 @@
   }
 }
 
+/* Progression Actions */
+.progression-row-control {
+  .qs-default-select {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .qs-range-select {
+    min-width: 100% !important;
+    white-space: nowrap;
+  }
+
+  .ant-input-search {
+    min-width: 100% !important;
+    width: auto !important;
+  }
+}
+
+/* General */
 .margin-start-auto {
   margin-inline-start: auto;
 }

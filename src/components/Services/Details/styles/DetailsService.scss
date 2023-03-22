@@ -22,15 +22,22 @@
 .qs-card-details {
   width: 100%;
 
-  .ant-row {
-    .ant-col {
-      .ant-space {
-        margin-bottom: 0.75rem;
-      }
+  // .ant-row {
+  //   .ant-col {
+  //     .qs-typography-group {
+  //       margin-bottom: 0.75rem;
+  //     }
+  //   }
+  // }
+}
+
+.service-row {
+  .service-col {
+    .qs-typography-group {
+      margin-bottom: 0.75rem;
     }
   }
 }
-
 .mb-12 {
   margin-bottom: 0.75rem !important;
 }

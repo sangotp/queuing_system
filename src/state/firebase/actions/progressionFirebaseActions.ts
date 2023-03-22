@@ -31,7 +31,7 @@ export const ReadFirebaseData = async() => {
             const assignexpDateObj = Object.assign(assignedProgression.expire_time, expObj) as DateTimeType
             const exp_time = new Date(assignexpDateObj.seconds * 1000) // convert seconds to miliseconds
 
-            const sortProgression = { id: assignedProgression.id, customer_name: assignedProgression.customer_name, 
+            const sortProgression = { doc_id: doc.id ,id: assignedProgression.id, customer_name: assignedProgression.customer_name, 
                 phone_number: assignedProgression.phone_number, email: assignedProgression.email, status: assignedProgression.status,
                 supply_id: assignedProgression.supply_id, service_id: assignedProgression.service_id, 
                 grant_time: grant_time, expire_time: exp_time, custom_Service: {id: '', name: ''}, custom_Device: { id: '', type: '' } } as ProgressionType

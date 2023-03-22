@@ -58,7 +58,7 @@ export const Group = (props: GroupProps) => {
   const { title, children, direction, className } = props
 
   return (
-    <Space direction={direction} className={className ? `${className} qs-typography-group` : 'qs-typography-group'}>
+    <Space direction={direction} className={className ? `qs-typography-group ${className}` : 'qs-typography-group'}>
       {generateTitle(title)}
       {generateContent(children)}
     </Space>

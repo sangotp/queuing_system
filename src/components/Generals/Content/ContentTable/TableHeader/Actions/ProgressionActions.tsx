@@ -35,9 +35,9 @@ export const ProgressionActions = (props: ProgressionActionsProps) => {
   })
 
   return (
-    <Row gutter={8} className={className ? `table-header-row ${className}` : 'table-header-row'}>
-      <Col className='table-header-col'>
-        <Typography.Title level={3}>Tên dịch vụ</Typography.Title>
+    <Row gutter={[0,12]} className={className ? `table-header-row progression-row-control ${className}` : 'table-header-row progression-row-control'}>
+      <Col xs={8} xl={3} className='table-header-col'>
+        <Typography.Title level={3} className='table-header-title'>Tên dịch vụ</Typography.Title>
         <DefaultSelect
             defaultValue="all"
             style={{ width: 120 }}
@@ -46,10 +46,12 @@ export const ProgressionActions = (props: ProgressionActionsProps) => {
               { value: 'all', label: 'Tất cả' },
               ...serviceOptions
             ]} 
+            className='select-services'
+            getPopupContainer={() => document.querySelector('.select-services')!}
         />
       </Col>
-      <Col className='table-header-col'>
-        <Typography.Title level={3}>Tình trạng</Typography.Title>
+      <Col xs={8} xl={3} className='table-header-col'>
+        <Typography.Title level={3} className='table-header-title'>Tình trạng</Typography.Title>
         <DefaultSelect
             defaultValue="all"
             style={{ width: 120 }}
@@ -59,11 +61,13 @@ export const ProgressionActions = (props: ProgressionActionsProps) => {
               { value: 'wait', label: 'Đang chờ' },
               { value: 'used', label: 'Đã sử dụng' },
               { value: 'skipped', label: 'Bỏ qua' },
-            ]} 
+            ]}
+            className='select-progression-status'
+            getPopupContainer={() => document.querySelector('.select-progression-status')!}
         />
       </Col>
-      <Col className='table-header-col'>
-        <Typography.Title level={3}>Nguồn cấp</Typography.Title>
+      <Col xs={8} xl={3} className='table-header-col'>
+        <Typography.Title level={3} className='table-header-title'>Nguồn cấp</Typography.Title>
         <DefaultSelect
             defaultValue="all"
             style={{ width: 120 }}
@@ -72,15 +76,17 @@ export const ProgressionActions = (props: ProgressionActionsProps) => {
               { value: 'all', label: 'Tất cả' },
               ...deviceOptions
             ]} 
+            className='select-devices'
+            getPopupContainer={() => document.querySelector('.select-devices')!}
         />
       </Col>
-      <Col className='table-header-col'>
-        <Typography.Title level={3}>Chọn thời gian</Typography.Title>
+      <Col xs={12} xl={6} className='table-header-col'>
+        <Typography.Title level={3} className='table-header-title'>Chọn thời gian</Typography.Title>
         <DateRangeSelect />
       </Col>
-      <Col className='table-header-col'>
-        <Typography.Title level={3}>Từ khóa</Typography.Title>
-        <SearchInput placeholder="Nhập từ khóa" onSearch={onSearch} style={{ width: 200 }} />
+      <Col xs={12} xl={7} className='table-header-col margin-start-auto'>
+        <Typography.Title level={3} className='table-header-title'>Từ khóa</Typography.Title>
+        <SearchInput placeholder="Nhập từ khóa" onSearch={onSearch} style={{ width: 200 }} className='table-header-search-input' />
       </Col>
     </Row>
   )

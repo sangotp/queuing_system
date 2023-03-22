@@ -29,6 +29,8 @@ export const BreadcrumbItemsGenerator = () => {
 
     /* Progression */
     const progression = JSON.stringify(['progression'])
+    const progressionDetails = JSON.stringify(['progression', 'details'])
+    const progressionCreate = JSON.stringify(['progression', 'create'])
 
     /* Report */
     const report = JSON.stringify(['report'])
@@ -127,7 +129,23 @@ export const BreadcrumbItemsGenerator = () => {
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cấp số</Button>)
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/progression')}>Danh sách cấp số</Button>)
-            break;
+        break;
+        case progressionDetails:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cấp số</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/progression')}>Danh sách cấp số</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/progression/details/${id}`)}>Chi tiết cấp số</Button>)
+        break;
+        case progressionCreate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cấp số</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/progression')}>Danh sách cấp số</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/progression/create`)}>Cấp số mới</Button>)
+        break;
         case report:
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Báo cáo</Button>)

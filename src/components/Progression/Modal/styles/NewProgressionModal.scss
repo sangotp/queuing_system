@@ -1,0 +1,79 @@
+@import '../../../styles/global';
+
+.progression-modal {
+  width: 469px !important;
+  
+  .ant-modal-content {
+    border-radius: 24px;
+    padding: 1rem;
+
+    .ant-modal-close {
+      width: 24px;
+      height: 24px;
+      color: $-orange-400 !important;
+
+      &:hover {
+        color: $-orange-500 !important;
+        background-color: $-orange-50 !important;
+      }
+
+      &:active {
+        color: $-orange-500 !important;
+        background-color: $-orange-100 !important;
+      }
+
+      &:focus-visible {
+        outline-color: $-orange-500;
+      }
+    }
+
+    .progression-modal-title.ant-typography {
+        color: $-gray-400 !important;
+        font: $-font-32-b !important;
+        margin-top: 1.75rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    /* Body */
+    .progression-modal-body-space {
+      display: flex;
+      gap: 24px !important;
+      margin-bottom: 2.75rem;
+
+      .ant-space-item {
+        text-align: center;
+
+        .progression-modal-body-main-text {
+          color: $-orange-500;
+          font: normal 800 56px/60px 'Nunito';
+        }
+
+        .progression-modal-body-sub-text {
+          color: $-gray-500;
+          font: $-font-18-r;
+        }
+      }
+    }
+
+    /* Footer */
+    .progression-modal-footer-space {
+      display: flex;
+      gap: 12px !important;
+      position: relative;
+      margin: -1rem;
+      padding: 1rem;
+      background: $-orange-400;
+      border-radius: 0 0 24px 24px;
+
+      .ant-space-item {
+        text-align: center;
+
+        .progression-modal-footer-main-text {
+          color: #ffffff;
+          font: $-font-22-b;
+        }
+      }
+    }
+  }
+}

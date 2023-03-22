@@ -29,7 +29,7 @@ h2 {
     flex: 1;
   }
 
-  .ant-space-item:has(> .qs-typography-group-children) {
+  .ant-space-item:has(> .qs-typography-group-children),  .ant-space-item:has(> .qs-typography-group-children-node > .status-container){
     flex: 3;
   }
   
