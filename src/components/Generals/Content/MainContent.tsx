@@ -1,6 +1,6 @@
 import { Layout } from 'antd'
 import { Routes, Route } from 'react-router-dom'
-import { Dashboard, Device, DetailsDevice, UpdateDevice, AddDevice, Service, AddService, DetailsService, UpdateDetailsService, Progression, Report, Roles, Accounts, ActivityHistory, Profile, ForgotPassword, Login, NotFound } from '../../index'
+import { Dashboard, Device, DetailsDevice, UpdateDevice, AddDevice, Service, AddService, DetailsService, UpdateDetailsService, Progression, AddProgression, DetailsProgression, Report, Roles, Accounts, ActivityHistory, Profile, ForgotPassword, Login, NotFound } from '../../index'
 import './styles/Content.css'
 
 const { Content } = Layout
@@ -27,6 +27,8 @@ export const MainContent = () => {
 
         {/* Progression */}
         <Route path='/progression' element={<Progression />} />
+        <Route path='/progression/details/:id' element={<DetailsProgression />} />
+        <Route path='/progression/create' element={<AddProgression />} />
 
         {/* Report */}
         <Route path='/report' element={<Report />} />

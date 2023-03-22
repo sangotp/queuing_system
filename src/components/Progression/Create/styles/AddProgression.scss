@@ -1,0 +1,35 @@
+@import '../../../styles/global';
+
+.progression-card {
+  width: 100% !important;
+  padding: 1.5rem;
+}
+
+.progression-main-title {
+  text-align: center;
+  font: $-font-32-b !important;
+}
+
+.progression-form-item {
+  .ant-form-item-label {
+    text-align: center;
+    label {
+      color: $-gray-400 !important;
+      font: $-font-20-b !important;
+    }
+  }
+
+  .ant-form-item-control-input-content {
+    display: flex;
+    justify-content: center;
+    .ant-select {
+      width: min(100vw - 6rem, 400px);
+    }
+  }
+}
+
+.form-actions-space-progression {
+  width: auto !important;
+  flex-wrap: wrap;
+  margin-top: 64px !important;
+}

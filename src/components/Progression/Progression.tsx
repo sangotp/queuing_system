@@ -1,15 +1,28 @@
 import { useSelector } from "react-redux";
 import { reducerTypes } from "../../state/reducers";
-import { ContentSpace, ContentTitle, TableHeader, TableBody } from '../Generals';
+import { ContentSpace, ContentTitle, TableHeader, TableBody, QsAsideActions } from '../Generals';
+import { useNavigate } from "react-router-dom";
+import { AddSquareIcon } from '../Generals';
 
 export const Progression = () => {
     const progressions = useSelector((state:reducerTypes) => state.progressions)
+
+    const navigate = useNavigate();
+
+    const handleCreateDeviceClick = () => {
+        navigate('/progression/create')
+    }
 
     return (
         <ContentSpace>
             <ContentTitle title='Quản lý cấp số' />
             <TableHeader />
             <TableBody type='Progression[]' data={progressions} />
+            <QsAsideActions actions={
+                [
+                    {icon: AddSquareIcon, onClick: handleCreateDeviceClick, children: <><span>Cấp</span><br/><span>số mới</span></> ,className:'qs-aside-btn-fixed-table'},
+                ]
+            } />
             {/* <div>
                 <h1>Quản lý cấp số</h1>
                 <table style={{ width: '100%', border: '1px solid black' }}>

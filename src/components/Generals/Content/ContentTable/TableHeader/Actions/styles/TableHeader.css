@@ -13,6 +13,7 @@
 /* Gray/$-gray-500 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 /* Font */
+/* 32/32 Bold */
 /* 30/30 Bold */
 /* 24/24 XLbold */
 /* 24/24 XBold --- */
@@ -124,7 +125,7 @@
   color: #ff7506;
 }
 .table-header-row .table-header-col .table-header-default-select, .table-header-row .table-header-col .table-header-search-input {
-  width: min(100vw - 3rem, 300px) !important;
+  min-width: 300px;
 }
 
 .search-input-lite .ant-input-wrapper .ant-input {
@@ -174,6 +175,21 @@
   color: #ff7506;
 }
 
+/* Progression Actions */
+.progression-row-control .qs-default-select {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+.progression-row-control .qs-range-select {
+  min-width: 100% !important;
+  white-space: nowrap;
+}
+.progression-row-control .ant-input-search {
+  min-width: 100% !important;
+  width: auto !important;
+}
+
+/* General */
 .margin-start-auto {
   margin-inline-start: auto;
 }/*# sourceMappingURL=TableHeader.css.map */

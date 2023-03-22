@@ -13,11 +13,14 @@
 /* Gray/$-gray-500 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 /* Font */
+/* 32/32 Bold */
 /* 30/30 Bold */
 /* 24/24 XLbold */
 /* 24/24 XBold --- */
 /* 24/24 Bold */
+/* 22/22 Bold */
 /* 20/20 Bold */
+/* 18/18 Reg */
 /* 16/16 Bold */
 /* 16/16 Semi */
 /* 16/16 Reg */
@@ -49,7 +52,8 @@
 .qs-card-details {
   width: 100%;
 }
-.qs-card-details .ant-row .ant-col .ant-space {
+
+.service-row .service-col .qs-typography-group {
   margin-bottom: 0.75rem;
 }
 

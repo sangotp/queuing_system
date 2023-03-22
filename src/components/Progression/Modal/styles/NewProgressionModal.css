@@ -1,0 +1,98 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 32/32 Bold */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 22/22 Bold */
+/* 20/20 Bold */
+/* 18/18 Reg */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.progression-modal {
+  width: 469px !important;
+}
+.progression-modal .ant-modal-content {
+  border-radius: 24px;
+  padding: 1rem;
+  /* Body */
+  /* Footer */
+}
+.progression-modal .ant-modal-content .ant-modal-close {
+  width: 24px;
+  height: 24px;
+  color: #ff9138 !important;
+}
+.progression-modal .ant-modal-content .ant-modal-close:hover {
+  color: #ff7506 !important;
+  background-color: #fff2e7 !important;
+}
+.progression-modal .ant-modal-content .ant-modal-close:active {
+  color: #ff7506 !important;
+  background-color: #FFE3CD !important;
+}
+.progression-modal .ant-modal-content .ant-modal-close:focus-visible {
+  outline-color: #ff7506;
+}
+.progression-modal .ant-modal-content .progression-modal-title.ant-typography {
+  color: #535261 !important;
+  font: normal 700 32px/48px "Nunito" !important;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.progression-modal .ant-modal-content .progression-modal-body-space {
+  display: flex;
+  gap: 24px !important;
+  margin-bottom: 2.75rem;
+}
+.progression-modal .ant-modal-content .progression-modal-body-space .ant-space-item {
+  text-align: center;
+}
+.progression-modal .ant-modal-content .progression-modal-body-space .ant-space-item .progression-modal-body-main-text {
+  color: #ff7506;
+  font: normal 800 56px/60px "Nunito";
+}
+.progression-modal .ant-modal-content .progression-modal-body-space .ant-space-item .progression-modal-body-sub-text {
+  color: #282739;
+  font: normal 400 18px/27px "Nunito";
+}
+.progression-modal .ant-modal-content .progression-modal-footer-space {
+  display: flex;
+  gap: 12px !important;
+  position: relative;
+  margin: -1rem;
+  padding: 1rem;
+  background: #ff9138;
+  border-radius: 0 0 24px 24px;
+}
+.progression-modal .ant-modal-content .progression-modal-footer-space .ant-space-item {
+  text-align: center;
+}
+.progression-modal .ant-modal-content .progression-modal-footer-space .ant-space-item .progression-modal-footer-main-text {
+  color: #ffffff;
+  font: normal 700 22px/33px "Nunito";
+}/*# sourceMappingURL=NewProgressionModal.css.map */

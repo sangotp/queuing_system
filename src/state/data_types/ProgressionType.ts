@@ -10,4 +10,5 @@ export type ProgressionType = {
     expire_time: Date
     custom_Service?: { id: string, name: string }
     custom_Device?: { id: string, type: string }
+    doc_id?: string
 }

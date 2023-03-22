@@ -45,19 +45,19 @@ export const DetailsService = () => {
             <ContentTitle title='Quản lý dịch vụ' />
             <Space size='large' className='service-card-space'>
                 <QSCard qscardtype='default' className='qs-card-details'>
-                    <Row>
-                        <Col xs={24}>
-                            <QSTypography.Title level={2} className='mb-12'>Thông tin dịch vụ</QSTypography.Title>
+                    <Row className='service-row'>
+                        <Col xs={24} className='service-col'>
+                            <QSTypography.Title level={2}>Thông tin dịch vụ</QSTypography.Title>
                         </Col>
-                        <Col xs={24}>
+                        <Col xs={24} className='service-col'>
                             <QSTypography.Group direction='horizontal' title='Mã dịch vụ:'>{service?.id}</QSTypography.Group>
                             <QSTypography.Group direction='horizontal' title='Tên dịch vụ:'>{service?.name}</QSTypography.Group>
                             <QSTypography.Group direction='horizontal' title='Mô tả:'>{service?.desc}</QSTypography.Group>
                         </Col>
-                        <Col xs={24}>
+                        <Col xs={24} className='service-col'>
                             <QSTypography.Title level={2} className='mb-12'>Quy tắc cấp số</QSTypography.Title>
                         </Col>
-                        <Col xs={24}>
+                        <Col xs={24} className='service-col'>
                             {service.progression_rules.map((rule) => {
                                 if (rule === 0)
                                 {
@@ -96,7 +96,7 @@ export const DetailsService = () => {
                                 return false;
                             })}
                         </Col>
-                        <Col xs={24}>
+                        <Col xs={24} className='service-col'>
                             <QSTypography.Text className='progression-rules'>Ví dụ: 201 - 2001</QSTypography.Text>
                         </Col>
                     </Row>

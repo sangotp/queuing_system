@@ -1,4 +1,5 @@
 export * from './Status'
-export * from './AddProgression'
-export * from './DetailsProgression'
+export * from './Create'
+export * from './Details'
 export * from './Progression'
+export * from './Modal'

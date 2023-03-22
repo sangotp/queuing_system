@@ -62,18 +62,18 @@ export const Columns = [
     dataIndex: 'progressionDetailsAction',
     key: 'progressionDetailsAction',
     render: (_, record) => (
-      <Link to='#'>Chi tiết</Link>
+      <Link to={`/progression/details/${record.key}`}>Chi tiết</Link>
     )
   },
 ] as ColumnsType<ProgressionDataType>
 
 export const dataSource = (data: DeviceType[] | ServiceType[] | ProgressionType[] | ReportType[] | UserRoleType[] | UserType[] | UserActivityLogType[]) => {
   const progressions = [] as ProgressionDataType[]
-  data.map((progression, index) => {
+  data.map((progression) => {
     const cloneProgressionObj = {} as ProgressionType
     const assignedProgressionObj = Object.assign(progression, cloneProgressionObj)
     const progressionDataType = {
-      key: index.toString(),
+      key: assignedProgressionObj.doc_id,
       id: assignedProgressionObj.id,
       customer_name: assignedProgressionObj.customer_name,
       phone_number: assignedProgressionObj.phone_number,
