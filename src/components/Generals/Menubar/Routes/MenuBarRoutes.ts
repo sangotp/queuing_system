@@ -151,7 +151,23 @@ const MenuBarRoutes = [
           pathName: 'account',
           textDisplay: 'Tài khoản',
           icon: null,
-          children: []
+          children: [],
+          actionLinks: [
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['account', 'create'],
+              pathName: 'create account',
+              parentPaths: ['account']
+            },
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['account', 'update'],
+              pathName: 'update account',
+              parentPaths: ['account']
+            },
+          ]
         },
         {
           type: 'subMenuItem',

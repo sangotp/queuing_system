@@ -53,18 +53,18 @@ export const Columns = [
     dataIndex: 'userUpdateAction',
     key: 'userUpdateAction',
     render: (_, record) => (
-      <Link to='#'>Cập nhật</Link>
+      <Link to={`/account/update/${record.key}`}>Cập nhật</Link>
     )
   },
 ] as ColumnsType<UserDataType>
 
 export const dataSource = (data: DeviceType[] | ServiceType[] | ProgressionType[] | ReportType[] | UserRoleType[] | UserType[] | UserActivityLogType[]) => {
   const users = [] as UserDataType[]
-  data.map((user, index) => {
+  data.map((user) => {
     const cloneUserObj = {} as UserType
     const assignedUserObj = Object.assign(user, cloneUserObj)
     const userDataType = {
-      key: index.toString(),
+      key: assignedUserObj.doc_id,
       username: assignedUserObj.username,
       fullname: assignedUserObj.fullname,
       phone_number: assignedUserObj.phone_number,

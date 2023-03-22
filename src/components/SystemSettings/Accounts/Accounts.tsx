@@ -1,16 +1,27 @@
 import { useSelector } from "react-redux";
 import { reducerTypes } from "../../../state/reducers";
-import { ContentSpace, ContentTitle, TableHeader, TableBody } from '../../Generals';
+import { ContentSpace, ContentTitle, TableHeader, TableBody, QsAsideActions, AddSquareIcon } from '../../Generals';
+import { useNavigate } from "react-router-dom";
 
 export const Accounts = () => {
     const accounts = useSelector((state: reducerTypes) => state.users)
+
+    const navigate = useNavigate();
+
+    const handleCreateAccountClick = () => {
+        navigate('/account/create')
+    }
 
     return (
         <ContentSpace>
             <ContentTitle title='Danh sách tài khoản' />
             <TableHeader />
             <TableBody type='User[]' data={accounts} />
-
+            <QsAsideActions actions={
+                [
+                    {icon: AddSquareIcon, onClick: handleCreateAccountClick, children: <><span>Thêm</span><br/><span>tài khoản</span></> ,className:'qs-aside-btn-fixed-table'},
+                ]
+            } />
             {/* <div>
                 <h1>Danh sách tài khoản</h1>
                 <table style={{ width: '100%', border: '1px solid black' }}>

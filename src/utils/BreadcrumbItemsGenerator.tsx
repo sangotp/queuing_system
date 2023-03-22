@@ -42,6 +42,8 @@ export const BreadcrumbItemsGenerator = () => {
 
     /* Account */
     const account = JSON.stringify(['account'])
+    const accountCreate = JSON.stringify(['account', 'create'])
+    const accountUpdate = JSON.stringify(['account', 'update'])
 
     /* Log */
     const log = JSON.stringify(['log'])
@@ -182,6 +184,22 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/account')}>Quản lý tài khoản</Button>)
             break;
+        case accountCreate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cài đặt hệ thống</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/account')}>Quản lý tài khoản</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/account/create')}>Thêm tài khoản</Button>)
+        break;
+        case accountUpdate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cài đặt hệ thống</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/account')}>Quản lý tài khoản</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/account/update/${id}`)}>Cập nhật tài khoản</Button>)
+        break;
         case log:
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cài đặt hệ thống</Button>)

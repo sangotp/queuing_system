@@ -26,6 +26,10 @@
           padding-inline-start: 1rem;
         }
 
+        thead > tr:has(> .hide) > th:nth-child(2) {
+          padding-inline-start: 1rem;
+        }
+
         th + th, thead > tr > td, td + td {
           border-left: 1px solid $-orange-100;
         }
@@ -50,6 +54,10 @@
         }
 
         tbody > tr > td:first-child {
+          padding-inline-start: 1rem;
+        }
+
+        tbody > tr:has(> .hide) > td:nth-child(2) {
           padding-inline-start: 1rem;
         }
       }

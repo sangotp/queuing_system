@@ -7,4 +7,5 @@ export type UserType = {
     activity_status: 0 | 1 // 0: Inactive | 1: Active
     user_role_id: string
     custom_role?: {id: string, name: string}
+    doc_id?: string
 }
