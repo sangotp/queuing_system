@@ -1,0 +1,12 @@
+@import '../../../styles/global';
+
+.role-space-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.table-header-inline {
+  top: calc(88px + 16px + 88px) !important;
+  right: 0;
+}

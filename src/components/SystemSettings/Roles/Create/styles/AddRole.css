@@ -1,0 +1,61 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 32/32 Bold */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 22/22 Bold */
+/* 20/20 Bold */
+/* 18/18 Reg */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.role-row .role-col .qs-form-item {
+  margin-bottom: 0.75rem !important;
+}
+
+.role-authorization-space {
+  display: flex;
+  max-height: 420px !important;
+  overflow-y: overlay;
+  background-color: #fff2e7;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  gap: 0 !important;
+  /* width */
+  /* Handle */
+}
+.role-authorization-space::-webkit-scrollbar {
+  width: 4px;
+}
+.role-authorization-space::-webkit-scrollbar-thumb {
+  background: #FFC89B;
+}
+.role-authorization-space .qs-typography-title {
+  margin-bottom: 0.75rem !important;
+}
+.role-authorization-space .qs-checkbox-group {
+  margin-bottom: 1.5rem !important;
+}/*# sourceMappingURL=AddRole.css.map */

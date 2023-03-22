@@ -1,0 +1,37 @@
+@import '../../../../styles/global';
+
+.role-row {
+  .role-col {
+    .qs-form-item {
+      margin-bottom: 0.75rem !important;
+    }
+  }
+}
+
+.role-authorization-space {
+  display: flex;
+  max-height: 420px !important;
+  overflow-y: overlay;
+  background-color: $-orange-50;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  gap: 0 !important;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $-orange-200;
+  }
+
+  .qs-typography-title {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .qs-checkbox-group {
+    margin-bottom: 1.5rem !important;
+  }
+}

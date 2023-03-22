@@ -49,6 +49,9 @@
   height: 20px !important;
   border: 1.5px solid #4277FF;
 }
+.qs-checkbox-group label .ant-checkbox .ant-checkbox-inner::after {
+  inset-inline-start: 28%;
+}
 .qs-checkbox-group label:hover .ant-checkbox-inner {
   border-color: #3055b5 !important;
 }

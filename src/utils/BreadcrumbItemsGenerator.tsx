@@ -37,6 +37,8 @@ export const BreadcrumbItemsGenerator = () => {
 
     /* Role */
     const role = JSON.stringify(['role'])
+    const roleCreate = JSON.stringify(['role', 'create'])
+    const roleUpdate = JSON.stringify(['role', 'update'])
 
     /* Account */
     const account = JSON.stringify(['account'])
@@ -157,6 +159,22 @@ export const BreadcrumbItemsGenerator = () => {
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cài đặt hệ thống</Button>)
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/role')}>Quản lý vai trò</Button>)
+            break;
+        case roleCreate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cài đặt hệ thống</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/role')}>Quản lý vai trò</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/role/create')}>Thêm vai trò</Button>)
+            break;
+        case roleUpdate:
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('#')}>Cài đặt hệ thống</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/role')}>Quản lý vai trò</Button>)
+            breadcrumbItems.push(
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/role/update/${id}`)}>Cập nhật vai trò</Button>)
             break;
         case account:
             breadcrumbItems.push(
