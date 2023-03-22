@@ -1,14 +1,27 @@
 import { useSelector } from "react-redux";
 import { reducerTypes } from "../../state/reducers";
-import { ContentSpace, TableHeader, TableBody } from '../Generals';
+import { ContentSpace, TableHeader, TableBody, QsAsideActions, DocumentDownload } from '../Generals';
+import { useNavigate } from "react-router-dom";
+import './styles/Report.css'
 
 export const Report = () => {
     const reports = useSelector((state: reducerTypes) => state.reports)
+
+    const navigate = useNavigate();
+
+    const handleDownloadReportClick = () => {
+        navigate('#')
+    }
     
     return (
         <ContentSpace>
             <TableHeader />
             <TableBody type='Report[]' data={reports} />
+            <QsAsideActions actions={
+                [
+                    {icon: DocumentDownload, onClick: handleDownloadReportClick, children: <><span>Tải về</span></> , className:'qs-aside-btn-fixed-table table-no-header'},
+                ]
+            } />
             {/* <div>
                 <h1>Báo cáo</h1>
                 <table style={{ width: '100%', border: '1px solid black' }}>
