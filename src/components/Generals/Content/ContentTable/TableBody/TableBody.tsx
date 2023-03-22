@@ -45,7 +45,7 @@ const GenerateTable = (type: string, data: DeviceType[] | ServiceType[] | Progre
       )
     case 'User[]':
       return (
-        <Table dataSource={UserCAD.dataSource(data)} columns={UserCAD.Columns} className='table-body-main-table' />
+        <Table pagination={{ pageSize: 9, hideOnSinglePage: true, prevIcon: ArrowLeftIcon, nextIcon: ArrowRightIcon, className:'custom-table-pagination' }} dataSource={UserCAD.dataSource(data)} columns={UserCAD.Columns} className='table-body-main-table' />
       )
     case 'UserActivityLog[]':
       return (

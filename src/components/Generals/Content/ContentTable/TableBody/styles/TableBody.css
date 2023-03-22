@@ -53,6 +53,9 @@
 .table-body-main-table .ant-table .ant-table-content table thead > tr > th:first-child {
   padding-inline-start: 1rem;
 }
+.table-body-main-table .ant-table .ant-table-content table thead > tr:has(> .hide) > th:nth-child(2) {
+  padding-inline-start: 1rem;
+}
 .table-body-main-table .ant-table .ant-table-content table th + th, .table-body-main-table .ant-table .ant-table-content table thead > tr > td, .table-body-main-table .ant-table .ant-table-content table td + td {
   border-left: 1px solid #FFE3CD;
 }
@@ -69,6 +72,9 @@
   background-color: #fff2e7;
 }
 .table-body-main-table .ant-table .ant-table-content table tbody > tr > td:first-child {
+  padding-inline-start: 1rem;
+}
+.table-body-main-table .ant-table .ant-table-content table tbody > tr:has(> .hide) > td:nth-child(2) {
   padding-inline-start: 1rem;
 }
 .table-body-main-table .custom-table-pagination .ant-pagination-prev {

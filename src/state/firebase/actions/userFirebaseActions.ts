@@ -17,7 +17,7 @@ export const ReadFirebaseData = async() => {
     
             const userClone = {} as UserType
             const assignedUser = Object.assign(doc.data(), userClone) as UserType
-            const sortUser = {username: assignedUser.username, fullname: assignedUser.fullname, 
+            const sortUser = {doc_id: doc.id ,username: assignedUser.username, fullname: assignedUser.fullname, 
                 phone_number: assignedUser.phone_number, email: assignedUser.email, password: assignedUser.password, 
                 activity_status: assignedUser.activity_status, user_role_id: assignedUser.user_role_id, 
                 custom_role: {id: '',name: ''}} as UserType

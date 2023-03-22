@@ -1,5 +1,6 @@
 import { Input, InputProps } from "antd"
 import type { TextAreaProps } from 'antd/es/input/TextArea'
+import { EyeIcon, EyeSlashIcon } from "./InputIcons"
 import './styles/DataInput.css'
 
 type SearchInputProps = {
@@ -17,6 +18,12 @@ export const SearchInput = (props: SearchInputProps) => {
 export const QsInput = (props: InputProps) => {
   return (
     <Input {...props} className={props.className ? `${props.className} qs-input` : 'qs-input'} />
+  )
+}
+
+export const QsInputPassword = (props: InputProps) => {
+  return (
+    <Input.Password {...props} iconRender={(visible) => (visible ? EyeIcon : EyeSlashIcon)} className={props.className ? `${props.className} qs-input-password` : 'qs-input-password'} />
   )
 }
 
