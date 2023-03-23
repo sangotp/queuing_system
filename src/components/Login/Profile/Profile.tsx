@@ -1,5 +1,5 @@
 import { Space, Avatar, Typography, Button, Form, Input, Row, Col } from "antd";
-import { UpdatePath } from "../../utils/RUDPath";
+import { UpdatePath } from "../../../utils/RUDPath";
 import './styles/Profile.css'
 import ProfileImage from './images/profile.png'
 import { Camera } from "./ProfileIcons";

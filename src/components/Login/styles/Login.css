@@ -1,0 +1,152 @@
+/* Orange/$-Orange-50 */
+/* Orange/$-Orange-100 */
+/* Orange/$-Orange-200 */
+/* Orange/$-Orange-300 */
+/* Orange/$-Orange-400 */
+/* Orange/$-Orange-500 */
+/* Orange/$-Orange-600 */
+/* Gray/$-gray-50 */
+/* Gray/$-gray-100 */
+/* Gray/$-gray-200 placeholder */
+/* Gray/$-gray-300 */
+/* Gray/$-gray-400 Text */
+/* Gray/$-gray-500 */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+/* Font */
+/* 36/36 XBold */
+/* 34/34 Reg */
+/* 32/32 Bold */
+/* 30/30 Bold */
+/* 24/24 XLbold */
+/* 24/24 XBold --- */
+/* 24/24 Bold */
+/* 22/22 Bold */
+/* 20/20 Bold */
+/* 18/18 Reg */
+/* 16/16 Bold */
+/* 16/16 Semi */
+/* 16/16 Reg */
+/* 14/14 Bold */
+/* 14/14 Lite Bold --- */
+/* 14/14 Reg */
+/* 12/12 Reg */
+* {
+  font-family: "Nunito";
+}
+
+.login-space {
+  gap: 0 !important;
+  display: flex;
+  height: 100dvh;
+}
+.login-space .ant-space-item:has(> .login-form-space) {
+  flex: 1;
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+.login-space .ant-space-item:has(> .illustration-image-space) {
+  flex: 1.5;
+  background-color: #ffffff;
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+.login-space .login-form-space {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  gap: 75px !important;
+}
+.login-space .login-form-space .alta-media-logo {
+  background: url(../LoginIcons/Icons/LogoAlta.svg) no-repeat;
+  width: 170px;
+  height: 136px;
+  margin-top: 4.125rem;
+}
+.login-space .login-form-space .login-form-row .login-form-col {
+  display: inline-flex;
+  justify-content: center;
+}
+.login-space .login-form-space .login-form-row .login-form-col label {
+  color: #37474F !important;
+  font: normal 400 18px/27px "Nunito" !important;
+}
+.login-space .login-form-space .login-form-row .login-form-col .ant-form-item-control-input {
+  width: min(100vw - 3rem, 400px);
+}
+.login-space .login-form-space .login-form-row .login-form-col .ant-form-item-control-input > .ant-form-item-control-input-content > input {
+  width: 100%;
+}
+.login-space .login-form-space .login-form-row .login-form-col .ant-form-item-control-input input {
+  color: #535261;
+  font: normal 400 18px/27px "Nunito";
+}
+.login-space .login-form-space .login-form-row .login-form-col .ant-form-item-control-input .qs-input-password {
+  width: 100% !important;
+}
+.login-space .login-form-space .login-form-row .login-form-col .form-space-forgot-password {
+  margin-bottom: 1.1875rem;
+  width: min(100vw - 3rem, 400px);
+}
+.login-space .login-form-space .login-form-row .login-form-col .form-space-forgot-password .ant-space-item a {
+  color: #E73F3F;
+  font: normal 400 14px/21px "Nunito";
+}
+.login-space .login-form-space .login-form-row .login-form-col .submit-login-btn {
+  height: 40px !important;
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation.red-border-warning .ant-form-item-control-input > .ant-form-item-control-input-content > input {
+  border: 1.5px solid #E73F3F !important;
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation.red-border-warning .ant-form-item-control-input .qs-input-password {
+  border: 1.5px solid #E73F3F !important;
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation .qs-form-item {
+  margin-bottom: 1.5rem;
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation .form-space-validation-password {
+  margin-top: 0.75rem;
+  align-items: center;
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation .form-space-validation-password .ant-space-item:has(svg) {
+  line-height: 0 !important;
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation .form-space-validation-password .ant-space-item .qs-typography-text {
+  color: #E73F3F;
+  font: normal 400 14px/21px "Nunito";
+}
+.login-space .login-form-space .login-form-row .login-form-col-validation .form-space-forgot-password-validation {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-space .illustration-image-space {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 605px;
+  height: 615px;
+  background: url(../LoginIcons/Icons/QueuingSystem.svg) no-repeat;
+  margin-top: 6.05875rem;
+  margin-left: 3.4375rem;
+  position: relative;
+}
+.login-space .illustration-image-space .ant-space-item:has(> .illustration-image-desc) {
+  position: absolute;
+  right: -19%;
+  top: 48%;
+}
+.login-space .illustration-image-space .ant-space-item:has(> .illustration-image-desc) .illustration-image-desc .illustration-image-sub-title {
+  font: normal 400 34px/51px "Nunito";
+  margin-bottom: 0;
+}
+.login-space .illustration-image-space .ant-space-item:has(> .illustration-image-desc) .illustration-image-desc .illustration-image-main-title {
+  font: normal 900 36px/54px "Nunito";
+  margin-top: 0;
+}/*# sourceMappingURL=Login.css.map */

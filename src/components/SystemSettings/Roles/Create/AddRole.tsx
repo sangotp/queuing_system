@@ -31,14 +31,14 @@ export const AddRole = () => {
                                 label="Tên vai trò:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập tên vai trò' value='' />
+                                <QsInput placeholder='Nhập tên vai trò' />
                             </Form.Item>
 
                             <Form.Item
                                 className='qs-form-item'
                                 label="Mô tả:"
                             >
-                                <QsTextArea placeholder="Nhập mô tả" value='' />
+                                <QsTextArea placeholder="Nhập mô tả" />
                             </Form.Item>
 
                             <Space size={4} align='center' className='form-space-desc' style={{ marginBottom: 'auto' }}>

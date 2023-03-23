@@ -7,6 +7,7 @@ import { userReducer } from "./userReducer";
 import { userActivityLogReducer } from "./userActivityLogReducer";
 import { reportReducer } from "./reportReducer";
 import { PathReducer } from "./global/PathReducer";
+import { loginReducer } from "./Login/loginReducer";
 
 export const reducers = combineReducers({
     devices: deviceReducer,
@@ -16,7 +17,8 @@ export const reducers = combineReducers({
     users: userReducer,
     userActivityLogs: userActivityLogReducer,
     reports: reportReducer,
-    paths: PathReducer
+    paths: PathReducer,
+    loginInfo: loginReducer
 })
 
 export type reducerTypes = ReturnType<typeof reducers>
