@@ -3,15 +3,10 @@ import { ContentSpace, ContentTitle, QSCard, QSTypography, Asterisk, QsInput, Qs
 import { Row, Col, Form, Space } from 'antd'
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
-// Select
-const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
-  };
-
-  // Checkbox Group
-  const onChange = (checkedValues: CheckboxValueType[]) => {
+// Checkbox Group
+const onChange = (checkedValues: CheckboxValueType[]) => {
     console.log('checked = ', checkedValues);
-  };
+};
 
 export const AddService = () => {
     const addServicePath = ['service', 'create']
@@ -31,7 +26,7 @@ export const AddService = () => {
                                 label="Mã dịch vụ:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập mã dịch vụ' value='' />
+                                <QsInput placeholder='Nhập mã dịch vụ' />
                             </Form.Item>
 
                             <Form.Item
@@ -40,7 +35,7 @@ export const AddService = () => {
                                 label="Tên dịch vụ:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Khám tim mạch' value='' />
+                                <QsInput placeholder='Khám tim mạch' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -48,7 +43,7 @@ export const AddService = () => {
                                 className='qs-form-item'
                                 label="Mô tả:"
                             >
-                                <QsTextArea placeholder="Mô tả dịch vụ" value='' />
+                                <QsTextArea placeholder="Mô tả dịch vụ" />
                             </Form.Item>
                         </Col>
                     </Row>

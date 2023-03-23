@@ -34,7 +34,7 @@ export const AddDevice = () => {
                                 label="Mã thiết bị:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập mã thiết bị' value='' />
+                                <QsInput placeholder='Nhập mã thiết bị' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -68,7 +68,7 @@ export const AddDevice = () => {
                                 label="Tên thiết bị:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập tên thiết bị' value='' />
+                                <QsInput placeholder='Nhập tên thiết bị' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -78,7 +78,7 @@ export const AddDevice = () => {
                                 label="Tên đăng nhập:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập tài khoản' value='' />
+                                <QsInput placeholder='Nhập tài khoản' />
                             </Form.Item>
                         </Col>
                     </Row>
@@ -90,7 +90,7 @@ export const AddDevice = () => {
                                 label="Địa chỉ IP:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập địa chỉ IP' value='' />
+                                <QsInput placeholder='Nhập địa chỉ IP' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -100,7 +100,7 @@ export const AddDevice = () => {
                                 label="Mật khẩu:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập mật khẩu' value='' />
+                                <QsInput placeholder='Nhập mật khẩu' />
                             </Form.Item>
                         </Col>
                     </Row>

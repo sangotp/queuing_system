@@ -32,7 +32,7 @@ export const AddAccount = () => {
                                 label="Họ tên:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập họ tên' value='' />
+                                <QsInput placeholder='Nhập họ tên' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -42,7 +42,7 @@ export const AddAccount = () => {
                                 label="Tên đăng nhập:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập tên đăng nhập' value='' />
+                                <QsInput placeholder='Nhập tên đăng nhập' />
                             </Form.Item>
                         </Col>
                     </Row>
@@ -54,7 +54,7 @@ export const AddAccount = () => {
                                 label="Số điện thoại:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập số điện thoại' value='' />
+                                <QsInput placeholder='Nhập số điện thoại' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -64,7 +64,7 @@ export const AddAccount = () => {
                                 label="Mật khẩu:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInputPassword type='password' placeholder='Nhập mật khẩu' value='P@$$W0RD' />
+                                <QsInputPassword type='password' placeholder='Nhập mật khẩu' defaultValue={'Pa$$w0rd'} />
                             </Form.Item>
                         </Col>
                     </Row>
@@ -76,7 +76,7 @@ export const AddAccount = () => {
                                 label="Email:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInput placeholder='Nhập email' value='' />
+                                <QsInput placeholder='Nhập email' />
                             </Form.Item>
                         </Col>
                         <Col xs={24} lg={12} xl={12}>
@@ -86,7 +86,7 @@ export const AddAccount = () => {
                                 label="Nhập lại Mật khẩu:"
                                 tooltip={{ title: 'This is a required field', icon: Asterisk }}
                             >
-                                <QsInputPassword type='password' placeholder='Nhập lại mật khẩu' value='P@$$W0RD' />
+                                <QsInputPassword type='password' placeholder='Nhập lại mật khẩu' defaultValue={'Pa$$w0rd'} />
                             </Form.Item>
                         </Col>
                     </Row>

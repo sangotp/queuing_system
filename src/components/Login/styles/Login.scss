@@ -1,0 +1,156 @@
+@import '../../styles/global';
+
+.login-space {
+  gap: 0 !important;
+  display: flex;
+  height: 100dvh;
+
+  .ant-space-item:has(> .login-form-space) {
+    flex: 1;
+    height: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  .ant-space-item:has(> .illustration-image-space) {
+    flex: 1.5;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 1rem 1.5rem;
+  }
+  
+  .login-form-space {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 75px !important;
+    
+    .alta-media-logo {
+      background: url(../LoginIcons/Icons/LogoAlta.svg) no-repeat;
+      width: 170px;
+      height: 136px;
+      margin-top: 4.125rem;
+    }
+
+    .login-form-row {
+      .login-form-col {
+        display: inline-flex;
+        justify-content: center;
+
+        label {
+          color: #37474F !important;
+          font: $-font-18-r !important;
+        }
+
+        .ant-form-item-control-input {
+          width: min(100vw - 3rem, 400px);
+
+          & > .ant-form-item-control-input-content > input {
+            width: 100%;
+          }
+
+          input {
+            color: $-gray-400;
+            font: $-font-18-r;
+          }
+
+          .qs-input-password {
+            width: 100% !important;
+          }
+        }
+
+        .form-space-forgot-password {
+          margin-bottom: 1.1875rem;
+          width: min(100vw - 3rem, 400px);
+  
+          .ant-space-item
+          {
+            a {
+              color: #E73F3F;
+              font: $-font-14-r;
+            }
+          }
+        }
+
+        .submit-login-btn {
+          height: 40px !important;
+          padding: 0.5rem 1rem;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .login-form-col-validation {
+        &.red-border-warning .ant-form-item-control-input {
+          & > .ant-form-item-control-input-content > input {
+            border: 1.5px solid #E73F3F !important;
+          }
+
+          .qs-input-password {
+            border: 1.5px solid #E73F3F !important;
+          }
+        }
+
+        .qs-form-item {
+          margin-bottom: 1.5rem;
+        }
+
+        .form-space-validation-password {
+          margin-top: 0.75rem;
+          align-items: center;
+
+          .ant-space-item:has(svg) {
+            line-height: 0 !important;
+          }
+          .ant-space-item
+          {
+            .qs-typography-text {
+              color: #E73F3F;
+              font: $-font-14-r;
+            }
+          }
+        }
+
+        .form-space-forgot-password-validation {
+          margin-top: 0.5rem;
+          margin-bottom: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .illustration-image-space {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 605px;
+    height: 615px;
+    background: url(../LoginIcons/Icons/QueuingSystem.svg) no-repeat;
+    margin-top: 6.05875rem;
+    margin-left: 3.4375rem;
+    position: relative;
+    // outline: 4px dashed red;
+
+    .ant-space-item:has(> .illustration-image-desc) {
+      position: absolute;
+      right: -19%;
+      top: 48%;
+
+      .illustration-image-desc {
+        .illustration-image-sub-title {
+          font: $-font-34-r;
+          margin-bottom: 0;
+        }
+
+        .illustration-image-main-title {
+          font: $-font-36-x-b;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
