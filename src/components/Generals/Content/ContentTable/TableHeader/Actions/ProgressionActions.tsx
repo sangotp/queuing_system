@@ -80,11 +80,11 @@ export const ProgressionActions = (props: ProgressionActionsProps) => {
             getPopupContainer={() => document.querySelector('.select-devices')!}
         />
       </Col>
-      <Col xs={12} xl={6} className='table-header-col'>
+      <Col xs={12} xl={7} className='table-header-col'>
         <Typography.Title level={3} className='table-header-title'>Chọn thời gian</Typography.Title>
         <DateRangeSelect />
       </Col>
-      <Col xs={12} xl={7} className='table-header-col margin-start-auto'>
+      <Col xs={12} xl={6} className='table-header-col margin-start-auto'>
         <Typography.Title level={3} className='table-header-title'>Từ khóa</Typography.Title>
         <SearchInput placeholder="Nhập từ khóa" onSearch={onSearch} style={{ width: 200 }} className='table-header-search-input' />
       </Col>

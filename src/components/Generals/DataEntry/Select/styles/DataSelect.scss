@@ -149,107 +149,161 @@
     }
   }
 }
-
-.qs-range-select {
-  min-width: 320px !important;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-
-  &.ant-picker-focused {
-    box-shadow: none;
-  }
-
-  .ant-picker-input {
-    background: #FFFFFF;
-    /* gray blue/gray 2 - stroke */
-    border: 1.5px solid $-gray-100;
-    border-radius: 8px;
-
-    input {
-      padding: 0.625rem 1rem;
-      color: $-gray-400;
-      &::placeholder {
-        font: $-font-16-r;
-        color: $-gray-200;
+.qs-date-range-picker-space {
+  gap: 0 !important;
+  position: relative;
+  
+  .qs-range-select {
+    width: min(100dvw, 340px) !important;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  
+    &.ant-picker-focused {
+      box-shadow: none;
+    }
+  
+    .ant-picker-input {
+      // background: #FFFFFF;
+      background-color: transparent;
+      /* gray blue/gray 2 - stroke */
+      border: 1.5px solid $-gray-100;
+      border-radius: 8px;
+  
+      input {
+        padding: 0.625rem 1rem 0.625rem 3rem;
+        color: $-gray-400;
+        &::placeholder {
+          font: $-font-16-r;
+          color: $-gray-200;
+        }
+        z-index: 1;
       }
     }
-  }
-
-  .ant-picker-active-bar {
-    margin-inline-start: 0;
-    background: $-orange-500;
-  }
-
-  /* Dropdown Date Select */
-  .ant-picker-cell {
-    min-width: 36px;
-    min-height: 36px;
-    padding-inline: 3px;
-    &::before {
-      background-color: transparent !important;
+  
+    .ant-picker-active-bar {
+      margin-inline-start: 0;
+      background: $-orange-500;
+    }
+  
+    /* Dropdown Date Select */
+    .ant-picker-cell {
       min-width: 36px;
-      height: 36px;
-    }
-
-    .ant-picker-cell-inner {
-      border-radius: 8px !important;
-      width: 100%;
-      height: 100%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 36px;
-    }
-
-    &::before, &::after {
-      border-color: $-orange-500 !important;
-      height: 36px !important;
-    }
-  }
-
-  .ant-picker-cell-range-hover-start, .ant-picker-cell-range-hover-end {
-
-    .ant-picker-cell-inner {
-      &::after {
+      min-height: 36px;
+      padding-inline: 3px;
+      &::before {
+        background-color: transparent !important;
+        min-width: 36px;
+        height: 36px;
+      }
+  
+      .ant-picker-cell-inner {
         border-radius: 8px !important;
-        background: $-orange-200 !important;
-        content: "";
-        inset-inline-end: 0 !important;
-        inset-inline-start: 0 !important;
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 36px;
+      }
+  
+      &::before, &::after {
+        border-color: $-orange-500 !important;
+        height: 36px !important;
+      }
+    }
+  
+    .ant-picker-cell-range-hover-start, .ant-picker-cell-range-hover-end {
+  
+      .ant-picker-cell-inner {
+        &::after {
+          border-radius: 8px !important;
+          background: $-orange-200 !important;
+          content: "";
+          inset-inline-end: 0 !important;
+          inset-inline-start: 0 !important;
+        }
+      }
+    }
+  
+    .ant-picker-cell-in-range::before {
+      background: $-orange-50 !important;
+    }
+  
+    .ant-picker-cell-range-start {
+      // &::before {
+      //   background: $-orange-50 !important;
+      // }
+  
+      .ant-picker-cell-inner {
+        background: $-orange-500 !important;
+      }
+    }
+  
+    .ant-picker-cell-range-end {
+      // &::before {
+      //   background: $-orange-50 !important;
+      // }
+  
+      .ant-picker-cell-inner {
+        background: $-orange-500 !important;
+      }
+    }
+  
+    .ant-picker-cell-today {
+      .ant-picker-cell-inner {
+        &::before {
+          border-color: $-orange-500 !important;
+        }
       }
     }
   }
 
-  .ant-picker-cell-in-range::before {
-    background: $-orange-50 !important;
-  }
+  // Input Icon
+  .qs-date-range-input-icon {
 
-  .ant-picker-cell-range-start {
-    // &::before {
-    //   background: $-orange-50 !important;
-    // }
+    &.qs-date-range-input-first-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
 
-    .ant-picker-cell-inner {
-      background: $-orange-500 !important;
-    }
-  }
-
-  .ant-picker-cell-range-end {
-    // &::before {
-    //   background: $-orange-50 !important;
-    // }
-
-    .ant-picker-cell-inner {
-      background: $-orange-500 !important;
-    }
-  }
-
-  .ant-picker-cell-today {
-    .ant-picker-cell-inner {
       &::before {
-        border-color: $-orange-500 !important;
+        content: "";
+        background-color: #ffffff;
+        position: absolute;
+        top: -10px;
+        left: -16px;
+        right: 0px;
+        bottom: 0;
+        height: 44px;
+        display: block;
+        z-index: -1;
+        border-radius: 8px;
+        width: min(100dvw, 156px) !important;
+      }
+    }
+
+    &.qs-date-range-input-last-icon {
+      position: absolute;
+      right: calc(40.8% - 16px);
+      top: 50%;
+      transform: translateY(-50%);
+
+      &::before {
+        content: "";
+        background-color: #ffffff;
+        position: absolute;
+        top: -9px;
+        left: -12px;
+        right: 0px;
+        height: 41px;
+        display: block;
+        z-index: -1;
+        border-radius: 8px;
+        width: min(100dvw, 153px) !important;
       }
     }
   }
