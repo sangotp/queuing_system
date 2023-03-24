@@ -53,7 +53,11 @@ export const Columns = [
     dataIndex: 'userUpdateAction',
     key: 'userUpdateAction',
     render: (_, record) => (
-      <Link to={`/account/update/${record.key}`}>Cập nhật</Link>
+      <Link to={`/account/update/${record.key}`} state={
+        {
+          userId: record.key
+        }
+      }>Cập nhật</Link>
     )
   },
 ] as ColumnsType<UserDataType>

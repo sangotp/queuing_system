@@ -7,9 +7,13 @@ import { useDispatch } from 'react-redux'
 import { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { reducerTypes } from '../../state/reducers';
+import { useNavigate } from 'react-router-dom';
 import './styles/Login.css'
 
 export const Login = () => {
+    // Navigate
+    const navigate = useNavigate()
+
     // OnChange Login Form
     const [username, setUserName] = useState('user01')
     const [password, setPassWord] = useState('Pa$$w0rd')
@@ -44,6 +48,12 @@ export const Login = () => {
         e.preventDefault()
         setIsSubmit(true)
         loginACT.LoginAction(username, password)
+
+        // Navigate To Path '/' If Path is "/login"
+        if (window.location.pathname === '/login')
+        {
+            navigate('/')
+        }
     }
 
     // Handle Login Info Status (Login Faild Or Success)

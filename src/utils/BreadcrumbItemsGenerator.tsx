@@ -1,14 +1,15 @@
 import { ReadPath } from "./RUDPath"
 import React from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useNavigate, NavigateOptions } from "react-router-dom"
 import { Button } from "antd"
+import { useLocation } from 'react-router-dom';
 
 export const BreadcrumbItemsGenerator = () => {
     // Read Current Path
     const paths = ReadPath()
 
-    // Params
-    const { id } = useParams()
+    // use Location Hook
+    const location = useLocation();
     
     // Path Defined
 
@@ -17,19 +18,19 @@ export const BreadcrumbItemsGenerator = () => {
 
     /* Device */
     const device = JSON.stringify(['device'])
-    const deviceDetails = JSON.stringify(['device', 'details'])
-    const deviceUpdate = JSON.stringify(['device', 'update'])
+    const deviceDetails = JSON.stringify(['device', 'details', `${location.state?.deviceId}`])
+    const deviceUpdate = JSON.stringify(['device', 'update', `${location.state?.deviceId}`])
     const deviceCreate = JSON.stringify(['device', 'create'])
 
     /* Service */
     const service = JSON.stringify(['service'])
-    const serviceDetails = JSON.stringify(['service', 'details'])
-    const serviceUpdate = JSON.stringify(['service', 'update'])
+    const serviceDetails = JSON.stringify(['service', 'details', `${location.state?.serviceId}`])
+    const serviceUpdate = JSON.stringify(['service', 'update', `${location.state?.serviceId}`])
     const serviceCreate = JSON.stringify(['service', 'create'])
 
     /* Progression */
     const progression = JSON.stringify(['progression'])
-    const progressionDetails = JSON.stringify(['progression', 'details'])
+    const progressionDetails = JSON.stringify(['progression', 'details', `${location.state?.progressionId}`])
     const progressionCreate = JSON.stringify(['progression', 'create'])
 
     /* Report */
@@ -38,12 +39,12 @@ export const BreadcrumbItemsGenerator = () => {
     /* Role */
     const role = JSON.stringify(['role'])
     const roleCreate = JSON.stringify(['role', 'create'])
-    const roleUpdate = JSON.stringify(['role', 'update'])
+    const roleUpdate = JSON.stringify(['role', 'update', `${location.state?.roleId}`])
 
     /* Account */
     const account = JSON.stringify(['account'])
     const accountCreate = JSON.stringify(['account', 'create'])
-    const accountUpdate = JSON.stringify(['account', 'update'])
+    const accountUpdate = JSON.stringify(['account', 'update', `${location.state?.userId}`])
 
     /* Log */
     const log = JSON.stringify(['log'])
@@ -58,8 +59,8 @@ export const BreadcrumbItemsGenerator = () => {
     const navigate = useNavigate()
 
     // Handle Button OnClick
-    const handleButtonOnClick = (path:string) => {
-        navigate(path)
+    const handleButtonOnClick = (path:string, options?:NavigateOptions) => {
+        navigate(path, options)
     }
 
     switch(JSON.stringify(paths))
@@ -80,7 +81,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/device')}>Danh sách thiết bị</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/device/details/${id}`)}>Chi tiết thiết bị</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/device/details/${location.state?.deviceId}`, {
+                    state: {
+                        deviceId: location.state?.deviceId
+                    }
+                })}>Chi tiết thiết bị</Button>)
             break;
         case deviceUpdate:
             breadcrumbItems.push(
@@ -88,7 +93,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/device')}>Danh sách thiết bị</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/device/update/${id}`)}>Cập nhật thiết bị</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/device/update/${location.state?.deviceId}`, {
+                    state: {
+                        deviceId: location.state?.deviceId
+                    }
+                })}>Cập nhật thiết bị</Button>)
             break;
         case deviceCreate:
             breadcrumbItems.push(
@@ -110,7 +119,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/service')}>Danh sách dịch vụ</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/details/${id}`)}>Chi tiết dịch vụ</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/details/${location.state?.serviceId}`, {
+                    state: {
+                        serviceId: location.state?.serviceId
+                    }
+                })}>Chi tiết dịch vụ</Button>)
             break;
         case serviceUpdate:
             breadcrumbItems.push(
@@ -118,7 +131,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/service')}>Danh sách dịch vụ</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/update/${id}`)}>Cập nhật dịch vụ</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/service/update/${location.state?.serviceId}`, {
+                    state: {
+                        serviceId: location.state?.serviceId
+                    }
+                })}>Cập nhật dịch vụ</Button>)
         break;
         case serviceCreate:
             breadcrumbItems.push(
@@ -140,7 +157,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/progression')}>Danh sách cấp số</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/progression/details/${id}`)}>Chi tiết cấp số</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/progression/details/${location.state?.progressionId}`, {
+                    state: {
+                        progressionId: location.state?.progressionId
+                    }
+                })}>Chi tiết cấp số</Button>)
         break;
         case progressionCreate:
             breadcrumbItems.push(
@@ -176,7 +197,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/role')}>Quản lý vai trò</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/role/update/${id}`)}>Cập nhật vai trò</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/role/update/${location.state?.roleId}`, {
+                    state: {
+                        roleId: location.state?.roleId
+                    }
+                })}>Cập nhật vai trò</Button>)
             break;
         case account:
             breadcrumbItems.push(
@@ -198,7 +223,11 @@ export const BreadcrumbItemsGenerator = () => {
             breadcrumbItems.push(
                 <Button type="text" className='text-btn' onClick={() => handleButtonOnClick('/account')}>Quản lý tài khoản</Button>)
             breadcrumbItems.push(
-                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/account/update/${id}`)}>Cập nhật tài khoản</Button>)
+                <Button type="text" className='text-btn' onClick={() => handleButtonOnClick(`/account/update/${location.state?.userId}}`, {
+                    state: {
+                        userId: location.state?.userId
+                    }
+                })}>Cập nhật tài khoản</Button>)
         break;
         case log:
             breadcrumbItems.push(

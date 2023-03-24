@@ -11,23 +11,6 @@ export const MainLayout = () => {
   const loginInfo = useSelector((state: reducerTypes) => state.loginInfo)
   console.log(loginInfo)
 
-  // useEffect(() => {
-  //   if (!loginInfo?.isLoggedIn)
-  //   {
-  //     switch (path)
-  //     {
-  //       case '/login':
-  //         navigate('/login')
-  //         break;
-  //       case '/forgotpassword':
-  //         navigate('/forgotpassword')
-  //         break;
-  //       default:
-  //         navigate(path)
-  //     }
-  //   }
-  // }, [])
-
   return loginInfo?.isLoggedIn ? (
     <Layout style={{ minHeight: '100vh' }}>
       <Menubar />

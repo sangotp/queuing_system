@@ -62,7 +62,11 @@ export const Columns = [
     dataIndex: 'progressionDetailsAction',
     key: 'progressionDetailsAction',
     render: (_, record) => (
-      <Link to={`/progression/details/${record.key}`}>Chi tiết</Link>
+      <Link to={`/progression/details/${record.key}`} state={
+        {
+          progressionId: record.key
+        }
+      }>Chi tiết</Link>
     )
   },
 ] as ColumnsType<ProgressionDataType>

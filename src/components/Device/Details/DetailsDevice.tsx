@@ -1,27 +1,29 @@
 import { useParams } from "react-router-dom";
 import { ContentSpace, ContentTitle, QsAsideActions, QSCard, QSTypography, EditSquareIcon } from '../../Generals'
-import { UpdatePath } from '../../../utils/RUDPath';
 import { QsUtilsRead } from '../../../utils/CRUD'
 import { Row, Col } from 'antd'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import './styles/DetailsDevice.css'
 
 export const DetailsDevice = () => {
-    // Params
-    const { id } = useParams()
+    // Location
+    const location = useLocation()
 
-    // Update Path
-    const deviceDetailsPath = ['device', 'details']
-    UpdatePath(deviceDetailsPath)
+    // Params
+    const { deviceId } = useParams()
 
     // Device
-    const device = QsUtilsRead.Device(id!)
+    const device = QsUtilsRead.Device(deviceId!)
 
     // Aside Actions Event
     const navigate = useNavigate();
 
     const handleUpdateDeviceClick = () => {
-        navigate(`/device/update/${id}`)
+        navigate(`/device/update/${deviceId}`, {
+            state: {
+                deviceId: location.state?.deviceId
+            }
+        })
     }
 
     return device && (

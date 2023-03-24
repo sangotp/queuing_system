@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { ContentSpace, ContentTitle, QsAsideActions, QSCard, QSTypography, ReturnSquareIcon } from '../../Generals'
-import { UpdatePath } from '../../../utils/RUDPath';
 import { QsUtilsRead } from '../../../utils/CRUD'
 import { Row, Col } from 'antd'
 import { useNavigate } from "react-router-dom";
@@ -9,15 +8,11 @@ import { ProgressionStatus } from "../Status";
 import './styles/DetailsProgression.css'
 
 export const DetailsProgression = () => {
-    // Path
-    const progressionDetailsPath = ['progression', 'details']
-    UpdatePath(progressionDetailsPath)
-
     // Params
-    const { id } = useParams()
+    const { progressionId } = useParams()
 
     // Progression
-    const progression = QsUtilsRead.Progression(id!)
+    const progression = QsUtilsRead.Progression(progressionId!)
 
     // Aside Actions Event
     const navigate = useNavigate();

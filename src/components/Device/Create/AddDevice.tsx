@@ -1,5 +1,4 @@
 import { ContentSpace, ContentTitle, QSCard, QSTypography, Asterisk, DefaultSelect, QsInput, QsButton } from '../../Generals';
-import { UpdatePath } from '../../../utils/RUDPath';
 import { Row, Col, Form, Space } from 'antd'
 import { useSelector } from 'react-redux';
 import { reducerTypes } from '../../../state/reducers';
@@ -13,10 +12,6 @@ const handleChange = (value: string) => {
   };
 
 export const AddDevice = () => {
-    // Path
-    const deviceCreatePath = ['device', 'create']
-    UpdatePath(deviceCreatePath)
-
     // Services
     const services = useSelector((state:reducerTypes) => state.services)
 

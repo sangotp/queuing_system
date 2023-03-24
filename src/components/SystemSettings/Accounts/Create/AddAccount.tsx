@@ -1,5 +1,4 @@
 import { ContentSpace, ContentTitle, QSCard, QSTypography, Asterisk, DefaultSelect, QsInput, QsButton, QsInputPassword } from '../../../Generals';
-import { UpdatePath } from '../../../../utils/RUDPath';
 import { Row, Col, Form, Space } from 'antd'
 import { useSelector } from 'react-redux';
 import { reducerTypes } from '../../../../state/reducers';
@@ -11,10 +10,6 @@ const handleChange = (value: string) => {
   };
 
 export const AddAccount = () => {
-    // Path
-    const createAccountPath = ['account', 'create']
-    UpdatePath(createAccountPath)
-
     // Roles
     const roles = useSelector((state: reducerTypes) => state.userRoles)
 
