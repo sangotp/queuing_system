@@ -26,3 +26,12 @@ export const LoginAction = (username: string, password: string) => {
         })
     }
 }
+
+export const LogoutAction = () => {
+    return async(dispatch: Dispatch) => {
+        dispatch({
+            type: Actions.Logout,
+            payload: {isLoggedIn: false} as UserLoginType
+        })
+    }
+}

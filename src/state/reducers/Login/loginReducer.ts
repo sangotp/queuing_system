@@ -6,6 +6,8 @@ export const loginReducer = (state: UserLoginType = loginInitialState, action:Ac
     {
         case Actions.Login:
             return state = action.payload
+        case Actions.Logout:
+            return state = action.payload
         default:
             return state
     }

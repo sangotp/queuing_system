@@ -61,7 +61,11 @@ export const Columns = [
     dataIndex: 'deviceDetailsAction',
     key: 'deviceDetailsAction',
     render: (_, record: DeviceDataType) => (
-      <Link to={`/device/details/${record.key}`}>Chi tiết</Link>
+      <Link to={`/device/details/${record.key}`} state={
+        {
+          deviceId: record.key
+        }
+      }>Chi tiết</Link>
     )
   },
   {
@@ -69,7 +73,11 @@ export const Columns = [
     dataIndex: 'deviceUpdateAction',
     key: 'deviceUpdateAction',
     render: (_, record: DeviceDataType) => (
-      <Link to={`/device/update/${record.key}`}>Cập nhật</Link>
+      <Link to={`/device/update/${record.key}`} state={
+        {
+          deviceId: record.key
+        }
+      }>Cập nhật</Link>
     )
   },
 ] as ColumnsType<DeviceDataType>

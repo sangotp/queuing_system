@@ -1,30 +1,22 @@
 import { useParams } from "react-router-dom";
 import { ContentSpace, ContentTitle, QsAsideActions, QSCard, QSTypography, EditSquareIcon, ReturnSquareIcon, QsCheckbox, TableBody } from '../../Generals'
-import { UpdatePath } from '../../../utils/RUDPath';
 import { QsUtilsRead } from '../../../utils/CRUD'
 import { Row, Col, Space } from 'antd'
-import { useNavigate } from "react-router-dom";
-import type { CheckboxValueType } from 'antd/es/checkbox/Group';
+import { useNavigate, useLocation } from "react-router-dom";
 import { ProgressionActionsLite } from "../../Generals/Content/ContentTable/TableHeader/Actions";
 import { useSelector } from "react-redux";
 import type { reducerTypes } from "../../../state/reducers";
 import './styles/DetailsService.css'
 
-
-// Checkbox Group
-const onChange = (checkedValues: CheckboxValueType[]) => {
-console.log('checked = ', checkedValues);
-};
-
 export const DetailsService = () => {
-    const detailsServicePath = ['service', 'details']
-    UpdatePath(detailsServicePath)
-
+    // Location
+    const location = useLocation()
+    
     // Params
-    const { id } = useParams()
+    const { serviceId } = useParams()
 
     // Service
-    const service = QsUtilsRead.Service(id!)
+    const service = QsUtilsRead.Service(serviceId!)
 
     // Progressions
     const progressions = useSelector((state:reducerTypes) => state.progressions)
@@ -33,7 +25,11 @@ export const DetailsService = () => {
     const navigate = useNavigate();
 
     const handleUpdateServiceClick = () => {
-        navigate(`/service/update/${id}`)
+        navigate(`/service/update/${serviceId}`, {
+            state: {
+                serviceId: location.state?.serviceId
+            }
+        })
     }
 
     const handleReturnServiceClick = () => {

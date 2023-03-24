@@ -6,6 +6,9 @@ import type { MenuProps } from 'antd';
 import './styles/Menu.css'
 import { ReadPath, UpdatePath } from '../../../utils/RUDPath';
 import Links, { menuLink } from './Routes/MenuBarRoutes';
+import { bindActionCreators } from 'redux';
+import { useDispatch } from 'react-redux';
+import { LoginActionCreators } from '../../../state/action-creators/Login';
 
 const { Sider } = Layout
 
@@ -134,6 +137,15 @@ export const Menubar = () => {
     // console.log(paths)
     // console.log(isMenuPathValid(paths[paths.length - 1], Links))
 
+    // Logout
+    const dispatch = useDispatch()
+    const { LogoutAction } = bindActionCreators(LoginActionCreators, dispatch)
+
+    // Handle Logout Button Click
+    const handleLogoutBtnClick = () => {
+        LogoutAction()
+    }
+
     return (
         <Sider
             className='menubar'
@@ -191,7 +203,7 @@ export const Menubar = () => {
             />
             </ConfigProvider>
             <div className='logout'>
-                <Link to='#' className='logout-link'>
+                <Link to='/login' onClick={handleLogoutBtnClick} className='logout-link'>
                     {React.createElement(Logout)}
                     <span className='logout-link-text'>Đăng xuất</span>
                 </Link>

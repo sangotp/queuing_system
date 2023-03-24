@@ -1,4 +1,3 @@
-import { UpdatePath } from "../../../utils/RUDPath";
 import { ContentSpace, ContentTitle, QSCard, QSTypography, QsButton, DefaultSelect } from '../../Generals';
 import { Row, Col, Form, Space } from 'antd'
 import { useSelector } from "react-redux";
@@ -14,10 +13,6 @@ const handleChange = (value: string) => {
 };
 
 export const AddProgression = () => {
-    // Path
-    const progressionCreatePath = ['progression', 'create']
-    UpdatePath(progressionCreatePath)
-
     // Services
     const services = useSelector((state: reducerTypes) => state.services)
 

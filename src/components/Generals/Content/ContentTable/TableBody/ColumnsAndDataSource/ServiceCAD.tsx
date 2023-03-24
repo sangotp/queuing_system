@@ -35,7 +35,11 @@ export const Columns = [
     dataIndex: 'serviceDetailsAction',
     key: 'serviceDetailsAction',
     render: (_, record) => (
-      <Link to={`/service/details/${record.key}`}>Chi tiết</Link>
+      <Link to={`/service/details/${record.key}`} state={
+        {
+          serviceId: record.key
+        }
+      }>Chi tiết</Link>
     )
   },
   {
@@ -43,7 +47,11 @@ export const Columns = [
     dataIndex: 'serviceUpdateAction',
     key: 'serviceUpdateAction',
     render: (_, record) => (
-      <Link to={`/service/update/${record.key}`}>Cập nhật</Link>
+      <Link to={`/service/update/${record.key}`} state={
+        {
+          serviceId: record.key
+        }
+      }>Cập nhật</Link>
     )
   },
 ] as ColumnsType<ServiceDataType>

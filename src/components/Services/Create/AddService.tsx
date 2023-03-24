@@ -1,4 +1,3 @@
-import { UpdatePath } from "../../../utils/RUDPath";
 import { ContentSpace, ContentTitle, QSCard, QSTypography, Asterisk, QsInput, QsButton, QsTextArea, QsCheckbox } from '../../Generals';
 import { Row, Col, Form, Space } from 'antd'
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
@@ -9,9 +8,6 @@ const onChange = (checkedValues: CheckboxValueType[]) => {
 };
 
 export const AddService = () => {
-    const addServicePath = ['service', 'create']
-    UpdatePath(addServicePath)
-
     return (
         <ContentSpace>
             <ContentTitle title='Quản lý dịch vụ' />

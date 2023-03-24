@@ -1,4 +1,3 @@
-import { UpdatePath } from "../../../../utils/RUDPath";
 import { ContentSpace, ContentTitle, QSCard, QSTypography, Asterisk, QsInput, QsButton, QsTextArea, QsCheckbox } from '../../../Generals';
 import { Row, Col, Form, Space } from 'antd'
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
@@ -13,10 +12,6 @@ console.log('checked = ', checkedValues);
 };
 
 export const AddRole = () => {
-    // Path
-    const roleCreatePath = ['role', 'create']
-    UpdatePath(roleCreatePath)
-
     return (
         <ContentSpace>
             <ContentTitle title='Danh sách vai trò' />

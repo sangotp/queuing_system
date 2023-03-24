@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { ContentSpace, ContentTitle, QSCard, QSTypography, Asterisk, DefaultSelect, QsInput, QsButton, QsInputPassword } from '../../../Generals';
-import { UpdatePath } from '../../../../utils/RUDPath';
 import { Row, Col, Form, Space } from 'antd'
 import { useSelector } from 'react-redux';
 import { reducerTypes } from '../../../../state/reducers';
@@ -14,14 +13,9 @@ const handleChange = (value: string) => {
   };
 
 export const UpdateAccount = () => {
-    const { id } = useParams()
-
-    // Path
-    const updateAccountPath = ['account', 'update']
-    UpdatePath(updateAccountPath)
-
+    const { userId } = useParams()
     // Account
-    const account = QsUtilsRead.Account(id!)
+    const account = QsUtilsRead.Account(userId!)
 
     // Roles
     const roles = useSelector((state: reducerTypes) => state.userRoles)
