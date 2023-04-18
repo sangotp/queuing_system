@@ -1,15 +1,15 @@
-// Format Date And Time Only
+/* Date And Time Format */
 export const DateAndTimeFormatter = (splitSymbol: string, order: 'time'| 'date', datetime: Date, fullTime?: 'showFullTime') =>{
-  // Time
+  // Format Time
   const timeBase = datetime.toLocaleTimeString().split(':')
   const time = `${fullTime === 'showFullTime' ? `${timeBase[0]}:${timeBase[1]}:${timeBase[2]}`: `${timeBase[0]}:${timeBase[1]}`}`
 
-  // Date
+  // Format Date
   const fixedDate = datetime.getDate() - 10 >= 0 ? datetime.getDate().toString() : `0${datetime.getDate()}`
   const fixedMonth = datetime.getMonth() - 10 >= 0 ? datetime.getMonth().toString() : `0${datetime.getMonth()}`
   const date = `${fixedDate}/${fixedMonth}/${datetime.getFullYear()}`
 
-  // Consider To Return
+  // Consider To Return Date Time Format
   switch(order)
   {
     case 'time':
@@ -21,17 +21,18 @@ export const DateAndTimeFormatter = (splitSymbol: string, order: 'time'| 'date',
   }
 }
 
+/* Date And Time Format For Progression */
 export const ProgressionGrantedDateFormatter = (splitSymbol: string, order: 'time'| 'date', datetime: Date, fullTime?: 'showFullTime') => {
-  // Time
+  // Format Time
   const timeBase = datetime.toLocaleTimeString().split(':')
   const time = `${fullTime === 'showFullTime' ? `${timeBase[0]}h${timeBase[1]}:${timeBase[2]}`: `${timeBase[0]}h${timeBase[1]}`}`
 
-  // Date
+  // Format Date
   const fixedDate = datetime.getDate() - 10 >= 0 ? datetime.getDate().toString() : `0${datetime.getDate()}`
   const fixedMonth = datetime.getMonth() - 10 >= 0 ? datetime.getMonth().toString() : `0${datetime.getMonth()}`
   const date = `${fixedDate}/${fixedMonth}/${datetime.getFullYear()}`
 
-  // Consider To Return
+  // Consider To Return Date Time Format
   switch(order)
   {
     case 'time':

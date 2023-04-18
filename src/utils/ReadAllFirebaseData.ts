@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { DeviceActionCreators, ServiceActionCreators, ProgressionActionCreators, ReportActionCreators, UserRoleActionCreators, UserActionCreators, UserActivityLogActionCreators } from '../state/action-creators';
 
+/* Function: Read All Firebase Data If Any */
 export const ReadAllFirebaseData = () => {
   const dispatch = useDispatch()
   const deviceActions = bindActionCreators(DeviceActionCreators, dispatch)
