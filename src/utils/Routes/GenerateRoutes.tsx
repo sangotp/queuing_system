@@ -3,6 +3,7 @@ import { Dashboard, Device, AddDevice, DetailsDevice, UpdateDevice, Service, Add
 import { GlobalRoutes } from '../../Routes/GlobalRoutes';
 import { useLocation } from 'react-router-dom';
 
+/* Function: Generate Guest Routes */
 export const GenerateGuestRoutes = () => {
   // use Location Hook
   const location = useLocation();
@@ -51,6 +52,7 @@ export const GenerateGuestRoutes = () => {
   }
 }
 
+/* Function: Generate Auth Routes */
 export const GenerateAuthRoutes = () => {
   // use Location Hook
   const location = useLocation();
